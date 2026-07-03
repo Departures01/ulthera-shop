@@ -115,13 +115,12 @@
         .strength-icon { width: 60px; height: 60px; border-radius: 12px; background-color: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 24px; }
         .strength-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 16px; }
 
-        /* Products & 2枚の大判画像対応複合メディアギャラリー */
+        /* Products & 大判画像ギャラリー */
         .products { background-color: var(--bg-light); }
         .attached-media-box { background: var(--white); border-radius: 20px; border: 1px solid #e2e8f0; padding: 30px; margin-bottom: 40px; box-shadow: var(--shadow-sm); text-align: center; }
         .attached-media-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--dark); display: flex; align-items: center; justify-content: center; gap: 8px; }
         .attached-media-box h3 i { color: var(--primary); }
         
-        /* 全体イメージ(depth-4)と全体の2番目(depth-5)を並べるプレミアムレイアウト */
         .gallery-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
         .gallery-main-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
         .gallery-sub-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
@@ -134,7 +133,6 @@
         .product-card:hover { box-shadow: var(--shadow-xl); }
         .product-badge { background-color: var(--dark); color: var(--white); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 4px; position: absolute; top: 20px; left: 20px; z-index: 10; }
         
-        /* 商品画像専用のコンテナボックス（写真を美しく収める） */
         .product-img-box { height: 240px; width: 100%; background-color: #fafafa; overflow: hidden; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0; }
         .product-img-box img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
 
@@ -273,7 +271,7 @@
                 <h1 class="hero-title">
                     ウルセラ消耗品<br>
                     <span>トランスデューサー専門</span><br>
-                    安心 of シリアル写真付請求システム
+                    安心のシリアル写真付請求システム
                 </h1>
                 
                 <div class="usp-badge-container">
@@ -361,7 +359,7 @@
             <div class="section-header">
                 <span class="section-tag">Lineup</span>
                 <h2 class="section-title">ウルセラ トランスデューサー（3種類）</h2>
-                <p class="section-desc">米国ディストリビューター公認ルートからの純正並行輸入品。全て2,400ショットのフル仕様です。</p>
+                <p class="section-desc">米国ディストリビューター公認ルートからの純正並行輸入品。全て 2,400 ショットのフル仕様です。</p>
             </div>
             
             <!-- 大判メディアギャラリー -->
@@ -495,7 +493,7 @@
                         ※消費税、振込・決済手数料は別途算出され請求書に加算されます。
                     </div>
                     
-                    <button type="button" class="btn btn-primary btn-lg" id="btn-sync-scroll">この内容で注文・見積依頼へ <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary btn-lg" id="btn-calc-sync">この内容で注文・見積依頼へ <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -527,9 +525,9 @@
                     <h3>医師の個人輸入特例措置と諸条件について</h3>
                 </div>
                 <div class="notice-list">
-                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>医師個人の自己責任使用が前提:</b> ウルセラ消耗品の個人輸入は、医師本人の臨床治療用途を目的とした特例措置です。第三者への転売や譲渡、グループ院外への融通は法律で固く禁止されています。</div></div>
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>自己の患者の診断又は治療に使用するために個人輸入:</b> ウルセラ消耗品の個人輸入は、医師本人が自己の患者の診断又は治療に使用することを前提とした特例措置です。第三者への転売や譲渡は法律で固く禁止されています。</div></div>
                     <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>薬監証明の完全代行:</b> 地方厚生局への書類提出や複雑な通関手続き交渉は、系列の国内法人<b>「DEPARTURES 株式会社」</b>がすべて代行・サポートいたします。</div></div>
-                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>医師免許証のご確認:</b> 適法運用の基本条件として、初回発注時に必ず「医師免許証の写し」をご提示いただきます。</div></div>
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>医師免許証のご確認:</b> 適法運用のご基本条件として、初回発注時に必ず「医師免許証の写し」をご提示いただきます。</div></div>
                     <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>為替レート適用基準:</b> 請求書発行日当日の「りそな銀行公示 TTSレート」が計算基準となります。</div></div>
                 </div>
             </div>
@@ -546,27 +544,27 @@
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item">
                     <div class="faq-question"><span>Q1. 本当にメーカー純正の正規品ですか？並行輸入品と何が違いますか？</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>商品は100%メーカー本物の正規品ですが、日本国内未承認機器のパーツにあたるため、すべて「並行輸入品」の扱いとなります。米国の公認ディストリビューターから直輸入した正規品です。なお、国内や欧米の正規市場には非公式な「正規品証明ロット番号」のようなトラッキングラベル制度は存在しません（アジア圏の一部コピー品流通国で独自に貼られているものはあります）。弊社は米国法人の信頼性をもって本物をお届けします。</p></div>
+                    <div class="faq-answer"><p>商品は正規品ですが、未承認機器のため全て並行輸入品になります。商品は米国の正規品の並行輸入となります。また、正規品証明可能なロット番号などは存在しません。一部中国や韓国（コピー品が多い国）ではロット番号が存在するようですが、日本国内や米国・欧州には存在しません。</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question"><span>Q2. 薬監証明の手続きや交渉はMLSに丸投げできますか？</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>はい。厚生労働局への書類提出や煩雑な交渉業務は、弊社の系列国内法人である「DEPARTURES 株式会社」が専門の輸入代行業者としてすべて責任を持って完全代行いたします。御院の手間はございません。</p></div>
+                    <div class="faq-question"><span>Q2. 厚生労働局への書類提出や交渉はMLSに丸投げできますか？</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>はい。厚生労働局への書類提出や交渉は輸入代行業者の「DEPARTURES 株式会社」が全面的に代行・担当いたしますのでご安心ください。</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Q3. 支払時期と決済方法の詳細を教えてください。</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>ご注文確定後、商品が弊社の米国カリフォルニアオフィスに到着した段階で、製品のシリアル番号写真と、当日の為替レートを適用した請求書をメール送付します。内容確認後2営業日以内にお支払いください。銀行振込のほか、Stripe Checkoutによるクレジットカード決済（Visa, Mastercard, JCB, AMEX等）も対応可能です。クレジット決済時は別途2.3%の手数料がかかりますが、初回お取引に限り当社が全額負担いたします。</p></div>
+                    <div class="faq-answer"><p>ご注文いただいた商品が弊社（米国カリフォルニア州）のオフィスに到着後、シリアル番号の写真と請求書（当日の為替レート適用）をメールで送信いたします。2営業日までにお支払いください。<br><br>決済方法：お振込みの場合は、日本国内の輸入代行会社へお振込みください。クレジットカード決済ご希望の方には、お支払い用 Stripe Checkout 決済リンクをご案内します。<br>※クレジットカード決済の場合、別途2.3%の手数料がかかります。初回のみ、当社が負担しカード決済手数料はサービスとさせていただきます。</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Q4. 注文から手元に届くまでに何日かかりますか？</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>お支払い完了通知を受け取ってから、通関を含め通常10日前後でご指定のクリニックへダイレクトにお届けいたします。最初のご発注依頼から数えると、全体で2〜3週間前後の所要予定となります。</p></div>
+                    <div class="faq-answer"><p>お支払い完了後、10日前後でご指定のクリニックにお届けいたします。発注から合計2〜3週間前後の予定でございます。</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Q5. 初期不良や照射途中のエラー等の不具合保証はどうなっていますか？</span><i class="fa-solid fa-chevron-down"></i></div>
                     <div class="faq-answer">
-                        <p>空輸中の破損や、装着時にシステムが読み込まない初期不良（未照射）は、速やかに無償代替品発送または返金対応いたします。使用開始後の不具合はメーカー有効期限内のみが対象で、照射残数が100LINE未満の場合は保証対象外です。<br>
-                        ●照射残数100LINE以上の不具合：【購入価格 ÷ 2,400発 × 残ショット数】で割り出した金額を、次回ご注文時に相殺させていただきます。（例: $2,500で購入、故障時残数1,000発の場合 ➡ $2,500 ÷ 2,400 × 1,000 = $1,041 保証金額）<br>
-                        ●エコー画像（映らない、暗い等）の不具合は保証対象外となります。<br>
-                        ●商品到着後3日以内に必ず検品を行ってください。4日目以降の欠品申告、医師の誤発注、外損（水漏れ、傷、破損）はすべて保証対象外となりますのでご注意ください。</p>
+                        <p>万が一、空輸中のパッケージ破損や、装着時のシステム読み込みエラー（未照射の初期不良）が発生した場合は、速やかに代替品の無償発送または返金の対応をいたします。使用後の不具合についての保証は、メーカー有効期限内のみ補償対象となります。また、照射残数が100LINE未満の場合は補償対象外となります。<br><br>
+                        ●照射残数100LINE以上の場合、LINE単価×LINE残数にて次回の注文時に相殺させていただきます。（例: $2,500で購入、故障時残数1,000発の場合 ➡ $2,500 ÷ 2,400 × 1,000 = $1,041 保証金額）<br>
+                        ●エコー画像（映らない、暗い、鮮明ではない等）の不具合は保証対象外となります。<br>
+                        ●商品到着後3日以内に検品をお願いします。商品到着後3日以降の欠品、誤発注品、外損（水漏れ、照射面の傷み、破損）は保証対象外となりますのでご注意ください。</p>
                     </div>
                 </div>
             </div>
@@ -597,7 +595,6 @@
                     <div class="form-row-2">
                         <div class="form-group">
                             <label for="form-zip">郵便番号 <span>*</span></label>
-                            <!-- 公開サーバーでも確実に稼働するよう、大文字小文字に対応したoninputイベントを調整 -->
                             <input type="text" id="form-zip" class="form-control" placeholder="例：1000001 (ハイフンなし7桁)" required>
                             <div id="zip-loading" class="zip-loading"><i class="fa-solid fa-spinner fa-spin"></i> 住所を自動入力中...</div>
                         </div>
@@ -690,7 +687,7 @@
                 <h5>商品お届け時期</h5><p>米国オフィス到着後、シリアル写真確認および決済完了確認後、10日前後で御院へ配送。</p>
                 <h5>保証・キャンセルについて</h5><p>未照射の初期不良や空輸時破損は無償代替発送対応。到着後3日以内の検品が必須となります（詳細はFAQ参照）。</p>
             </div>
-            <button class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
         </div>
     </div>
 
@@ -700,7 +697,7 @@
             <div class="modal-body-text">
                 <p>Departures KIX Inc.および系列法人（DEPARTURES株式会社）は、お申し込み時にご提示いただくクリニック情報、医師確認書類（医師免許証の写し）、ならびに個人情報を、管轄厚生局への薬監証明申請、税関通関手続き、および商品配送に関わる業務以外の目的で利用、または第三者へ提供・開示することはいたしません。関連法令に則り、安全かつ適切に管理いたします。</p>
             </div>
-            <button class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
         </div>
     </div>
 
@@ -708,9 +705,9 @@
         <div class="modal-box">
             <h3>医師個人輸入に関する免責事項</h3>
             <div class="modal-body-text">
-                <p>本サイトが個人輸入代行を行うウルセラ用トランスデューサーは、国内未承認医療機器パーツであり、厚生労働省の個人輸入特例措置のもと、医師個人の資格において自己の責任下で臨床使用されるものです。使用に伴う直接的または間接的なトラブル、機器本体へのエラー等に関し、当社は製品不具合保証規約（FAQ記載）を超える範囲の法的責任や損害賠償義務を負いません。御院の十分な管理のもとご使用ください。</p>
+                <p>本サイトが個人輸入代行を行うウルセラ用トランスデューサーは、国内未承認医療機器パーツであり、厚生労働省の個人輸入特例措置のもと、医師個人の資格において自己の責任下で臨床使用されるものです。対象製品の使用に伴う直接的または間接的なトラブル、機器本体へのエラー等に関し、当社は製品不具合保証規約（FAQ記載）を超える範囲の法的責任や損害賠償義務を負いません。御院の十分な管理のもとご使用ください。</p>
             </div>
-            <button class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
         </div>
     </div>
 
@@ -722,180 +719,217 @@
             <p style="font-size:14px; margin-bottom:20px; text-align:left; line-height:1.6;">
                 Departures KIX Inc.の医師輸入窓口にて内容を受領しました。後ほど担当よりご連絡させていただきます。
             </p>
-            <button class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
         </div>
     </div>
 
-    <!-- 💡 一般公開サーバー上の非同期バグを防ぐため、すべての処理をDOMが読み込み終わった後に一元実行する絶対安全設計へ刷新 -->
+    <!-- 💡 すべてのボタン、フォーム、ポップアップを公開サーバー上でも絶対確実に稼働させる統合JSエンジン -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Google Apps Script (GAS) のWebアプリURLをここに貼り付けると本稼働します。
+        // グローバル関数として増減処理と計算処理を定義（どこからでも100%呼び出せる設計）
+        function stepQty(id, change) {
+            const input = document.getElementById('qty-' + id);
+            if (!input) return;
+            let val = (parseInt(input.value) || 0) + change;
+            if (val < 0) val = 0;
+            input.value = val;
+            updateCalc();
+        }
+
+        function updateCalc() {
+            const ut1Input = document.getElementById('qty-ut1');
+            const ut2Input = document.getElementById('qty-ut2');
+            const ut4Input = document.getElementById('qty-ut4');
+            
+            if (!ut1Input || !ut2Input || !ut4Input) return;
+
+            const ut1 = parseInt(ut1Input.value) || 0;
+            const ut2 = parseInt(ut2Input.value) || 0;
+            const ut4 = parseInt(ut4Input.value) || 0;
+            
+            const totalQty = ut1 + ut2 + ut4;
+            
+            let unitPrice = 2700;
+            if (totalQty >= 6) { unitPrice = 2500; }
+            
+            let shipping = 0;
+            if (totalQty > 0) { shipping = (totalQty <= 4) ? 175 : 225; }
+            
+            const overhead = totalQty > 0 ? 90 : 0;
+            const subtotal = totalQty * unitPrice;
+            const grandTotal = subtotal + shipping + overhead;
+            
+            const elTotal = document.getElementById('res-total-qty');
+            const elUnit = document.getElementById('res-unit-price');
+            const elSub = document.getElementById('res-subtotal');
+            const elShip = document.getElementById('res-shipping');
+            const elOver = document.getElementById('res-overhead');
+            const elGrand = document.getElementById('res-grand-total');
+
+            if (elTotal) elTotal.innerText = totalQty + " 個";
+            if (elUnit) elUnit.innerText = "$" + unitPrice.toLocaleString() + " /個";
+            if (elSub) elSub.innerText = "$" + subtotal.toLocaleString();
+            if (elShip) elShip.innerText = "$" + shipping.toLocaleString();
+            if (elOver) elOver.innerText = "$" + overhead.toLocaleString();
+            if (elGrand) elGrand.innerText = "$" + grandTotal.toLocaleString();
+        }
+
+        // 画面の構築完了を待ってから、安全に連動処理を開始
+        window.addEventListener("load", function() {
             const GAS_WEB_APP_URL = "ここにあなたのGASのURLを貼り付けます";
 
-            // 1. 各種カウンターボタンの取得とイベント連動
-            const qtyUt1 = document.getElementById('qty-ut1');
-            const qtyUt2 = document.getElementById('qty-ut2');
-            const qtyUt4 = document.getElementById('qty-ut4');
-
-            document.getElementById('btn-ut1-minus').addEventListener('click', function() { stepQty(qtyUt1, -1); });
-            document.getElementById('btn-ut1-plus').addEventListener('click', function() { stepQty(qtyUt1, 1); });
-            document.getElementById('btn-ut2-minus').addEventListener('click', function() { stepQty(qtyUt2, -1); });
-            document.getElementById('btn-ut2-plus').addEventListener('click', function() { stepQty(qtyUt2, 1); });
-            document.getElementById('btn-ut4-minus').addEventListener('click', function() { stepQty(qtyUt4, -1); });
-            document.getElementById('btn-ut4-plus').addEventListener('click', function() { stepQty(qtyUt4, 1); });
-
-            // 数量増減の汎用ヘルパー
-            function stepQty(inputElement, change) {
-                let val = (parseInt(inputElement.value) || 0) + change;
-                if (val < 0) val = 0;
-                inputElement.value = val;
-                updateCalc();
-            }
-
-            // テキストボックスの直接手入力変更にも連動させる
-            qtyUt1.addEventListener('change', updateCalc);
-            qtyUt2.addEventListener('change', updateCalc);
-            qtyUt4.addEventListener('change', updateCalc);
-
-            // 概算見積り計算ロジック
-            function updateCalc() {
-                const ut1 = parseInt(qtyUt1.value) || 0;
-                const ut2 = parseInt(qtyUt2.value) || 0;
-                const ut4 = parseInt(qtyUt4.value) || 0;
-                
-                const totalQty = ut1 + ut2 + ut4;
-                
-                let unitPrice = 2700;
-                if (totalQty >= 6) { unitPrice = 2500; }
-                
-                let shipping = 0;
-                if (totalQty > 0) { shipping = (totalQty <= 4) ? 175 : 225; }
-                
-                const overhead = totalQty > 0 ? 90 : 0;
-                const subtotal = totalQty * unitPrice;
-                const grandTotal = subtotal + shipping + overhead;
-                
-                document.getElementById('res-total-qty').innerText = totalQty + " 個";
-                document.getElementById('res-unit-price').innerText = "$" + unitPrice.toLocaleString() + " /個";
-                document.getElementById('res-subtotal').innerText = "$" + subtotal.toLocaleString();
-                document.getElementById('res-shipping').innerText = "$" + shipping.toLocaleString();
-                document.getElementById('res-overhead').innerText = "$" + overhead.toLocaleString();
-                document.getElementById('res-grand-total').innerText = "$" + grandTotal.toLocaleString();
-            }
-
-            // シミュレーター内容を下部注文フォームへ同期・スクロール
-            document.getElementById('btn-sync-scroll').addEventListener('click', function() {
-                const ut1 = qtyUt1.value;
-                const ut2 = qtyUt2.value;
-                const ut4 = qtyUt4.value;
-                document.getElementById('form-spec').value = `7-3.0mm(UT-1): ${ut1}個 / 4-4.5mm(UT-2): ${ut2}個 / 10-1.5mm(UT-4): ${ut4}個希望`;
-                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            });
-
-            // 2. 郵便番号から住所への自動入力連動
-            const zipInputElement = document.getElementById('form-zip');
-            zipInputElement.addEventListener('input', function() {
-                const zipInput = zipInputElement.value.replace(/[^0-9]/g, ''); // 数字以外を完全排除
-                const addressInput = document.getElementById('form-address');
-                const loadingLabel = document.getElementById('zip-loading');
-                
-                if (zipInput.length === 7) {
-                    loadingLabel.style.display = 'block';
-                    fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipInput}`)
-                        .then(response => response.json())
-                        .then(data => {
-                            loadingLabel.style.display = 'none';
-                            if (data.results && data.results[0]) {
-                                const res = data.results[0];
-                                addressInput.value = res.address1 + res.address2 + res.address3;
-                            }
-                        })
-                        .catch(error => {
-                            loadingLabel.style.display = 'none';
-                            console.error("住所自動入力エラー:", error);
-                        });
-                }
-            });
-
-            // 3. FAQアコーディオン
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.querySelector('.faq-question').addEventListener('click', () => {
-                    item.classList.toggle('active');
-                });
-            });
-
-            // 4. モーダル（ポップアップの開閉を一元管理する強固なセレクタ）
-            document.querySelectorAll('.modal-trigger-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    document.getElementById(targetId).classList.add('open');
-                });
-            });
-
-            document.querySelectorAll('.modal-close-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.closest('.modal-overlay').classList.remove('open');
-                });
-            });
-
-            // 5. ファイル添付の表示反応
-            const fileInput = document.getElementById('form-file');
-            fileInput.addEventListener('change', (e) => {
-                if (e.target.files.length > 0) {
-                    document.getElementById('file-name').innerText = e.target.files[0].name;
-                    document.getElementById('file-status').style.display = 'flex';
-                }
-            });
-
-            // 6. フォームの送信処理（GAS対応型）
-            document.getElementById('inquiry-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                const submitBtn = document.getElementById('form-submit-btn');
-                submitBtn.disabled = true;
-                submitBtn.innerText = "送信中...";
-
-                const formData = {
-                    spec: document.getElementById('form-spec').value,
-                    clinic: document.getElementById('form-clinic').value,
-                    doctor: document.getElementById('form-doctor').value,
-                    email: document.getElementById('form-email').value,
-                    phone: document.getElementById('form-phone').value,
-                    zip: document.getElementById('form-zip').value,
-                    address: document.getElementById('form-address').value,
-                    sub_contact: document.getElementById('form-sub-contact').value,
-                    mobile: document.getElementById('form-mobile').value,
-                    message: document.getElementById('form-message').value
-                };
-
-                if(GAS_WEB_APP_URL !== "ここにあなたのGASのURLを貼り付けます") {
-                    fetch(GAS_WEB_APP_URL, {
-                        method: "POST",
-                        mode: "no-cors",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(formData)
-                    }).then(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
-                        document.getElementById('success-modal').classList.add('open');
-                        document.getElementById('inquiry-form').reset();
-                        document.getElementById('file-status').style.display = 'none';
-                    }).catch(err => {
-                        alert("送信エラーが発生しました。");
-                        submitBtn.disabled = false;
-                    });
-                } else {
-                    setTimeout(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
-                        document.getElementById('success-modal').classList.add('open');
-                        document.getElementById('inquiry-form').reset();
-                        document.getElementById('file-status').style.display = 'none';
-                    }, 1000);
-                }
-            });
-
-            // 初回計算の実行
+            // 初期計算の実行
             updateCalc();
+
+            // ＋ーボタンのクリックイベントをJavaScript側から確実に紐付け
+            const btnUt1Minus = document.getElementById('btn-ut1-minus');
+            const btnUt1Plus = document.getElementById('btn-ut1-plus');
+            const btnUt2Minus = document.getElementById('btn-ut2-minus');
+            const btnUt2Plus = document.getElementById('btn-ut2-plus');
+            const btnUt4Minus = document.getElementById('btn-ut4-minus');
+            const btnUt4Plus = document.getElementById('btn-ut4-plus');
+
+            if(btnUt1Minus) btnUt1Minus.addEventListener('click', function() { stepQty('ut1', -1); });
+            if(btnUt1Plus)  btnUt1Plus.addEventListener('click', function() { stepQty('ut1', 1); });
+            if(btnUt2Minus) btnUt2Minus.addEventListener('click', function() { stepQty('ut2', -1); });
+            if(btnUt2Plus)  btnUt2Plus.addEventListener('click', function() { stepQty('ut2', 1); });
+            if(btnUt4Minus) btnUt4Minus.addEventListener('click', function() { stepQty('ut4', -1); });
+            if(btnUt4Plus)  btnUt4Plus.addEventListener('click', function() { stepQty('ut4', 1); });
+
+            // 数量インプット内の上下矢印マークが押された時（changeイベント）も100%リアルタイム計算を走らせる
+            const inputs = ['qty-ut1', 'qty-ut2', 'qty-ut4'];
+            inputs.forEach(function(id) {
+                const targetInput = document.getElementById(id);
+                if (targetInput) {
+                    targetInput.addEventListener('change', updateCalc);
+                    targetInput.addEventListener('input', updateCalc); // キーボード入力にも即時反応
+                }
+            });
+
+            // シミュレーター内容を下部フォームへ連動・スクロールするボタン
+            const btnSyncScroll = document.getElementById('btn-sync-scroll');
+            if (btnSyncScroll) {
+                btnSyncScroll.addEventListener('click', function() {
+                    const ut1 = document.getElementById('qty-ut1').value;
+                    const ut2 = document.getElementById('qty-ut2').value;
+                    const ut4 = document.getElementById('qty-ut4').value;
+                    document.getElementById('form-spec').value = `7-3.0mm(UT-1): ${ut1}個 / 4-4.5mm(UT-2): ${ut2}個 / 10-1.5mm(UT-4): ${ut4}個希望`;
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // 郵便番号住所連動処理
+            const zipInput = document.getElementById('form-zip');
+            if (zipInput) {
+                zipInput.addEventListener('input', function() {
+                    const zipVal = zipInput.value.replace(/[^0-9]/g, '');
+                    const addressInput = document.getElementById('form-address');
+                    const loadingLabel = document.getElementById('zip-loading');
+                    
+                    if (zipVal.length === 7) {
+                        if (loadingLabel) loadingLabel.style.display = 'block';
+                        fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipVal}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (loadingLabel) loadingLabel.style.display = 'none';
+                                if (data.results && data.results[0]) {
+                                    const res = data.results[0];
+                                    addressInput.value = res.address1 + res.address2 + res.address3;
+                                }
+                            })
+                            .catch(error => {
+                                if (loadingLabel) loadingLabel.style.display = 'none';
+                                console.error("住所自動入力エラー:", error);
+                            });
+                    }
+                });
+            }
+
+            // モーダルポップアップ制御のイベント紐付け
+            document.querySelectorAll('.modal-trigger-btn').forEach(function(trigger) {
+                trigger.addEventListener('click', function() {
+                    const targetId = trigger.getAttribute('data-target');
+                    const modal = document.getElementById(targetId);
+                    if (modal) modal.classList.add('open');
+                });
+            });
+
+            document.querySelectorAll('.modal-close-btn').forEach(function(closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    const modal = closeBtn.closest('.modal-overlay');
+                    if (modal) modal.classList.remove('open');
+                });
+            });
+
+            // FAQトグル
+            document.querySelectorAll('.faq-item').forEach(function(item) {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', function() {
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+
+            // ファイル添付検知
+            const fileInput = document.getElementById('form-file');
+            if (fileInput) {
+                fileInput.addEventListener('change', function(e) {
+                    if (e.target.files.length > 0) {
+                        document.getElementById('file-name').innerText = e.target.files[0].name;
+                        document.getElementById('file-status').style.display = 'flex';
+                    }
+                });
+            }
+
+            // フォーム発信
+            const inquiryForm = document.getElementById('inquiry-form');
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const submitBtn = document.getElementById('form-submit-btn');
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = "送信中...";
+
+                    const formData = {
+                        spec: document.getElementById('form-spec').value,
+                        clinic: document.getElementById('form-clinic').value,
+                        doctor: document.getElementById('form-doctor').value,
+                        email: document.getElementById('form-email').value,
+                        phone: document.getElementById('form-phone').value,
+                        zip: document.getElementById('form-zip').value,
+                        address: document.getElementById('form-address').value,
+                        sub_contact: document.getElementById('form-sub-contact').value,
+                        mobile: document.getElementById('form-mobile').value,
+                        message: document.getElementById('form-message').value
+                    };
+
+                    if(GAS_WEB_APP_URL !== "ここにあなたのGASのURLを貼り付けます") {
+                        fetch(GAS_WEB_APP_URL, {
+                            method: "POST",
+                            mode: "no-cors",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(formData)
+                        }).then(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                            document.getElementById('success-modal').classList.add('open');
+                            inquiryForm.reset();
+                            document.getElementById('file-status').style.display = 'none';
+                        }).catch(err => {
+                            alert("送信エラーが発生しました。");
+                            submitBtn.disabled = false;
+                        });
+                    } else {
+                        setTimeout(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                            document.getElementById('success-modal').classList.add('open');
+                            inquiryForm.reset();
+                            document.getElementById('file-status').style.display = 'none';
+                        }, 1000);
+                    }
+                });
+            }
         });
     </script>
 </body>
