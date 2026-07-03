@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ウルセラ消耗品特化型SEOタイトル＆ディスクリプション -->
+    <title>【医師限定】ウルセラ消耗品（トランスデューサー）個人輸入代行専門 | Departures KIX Inc.</title>
+    <meta name="description" content="医師限定のウルセラトランスデューサー（7-3.0mm/4-4.5mm/10-1.5mm）個人輸入代行専門サイト。米国正規並行輸入、シリアル番号・有効期限の写真提供システムで圧倒的な安心感。決済後最短10日前後で御院へお届け。薬監証明手続き完全代行。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0d9488; /* Deep Teal - Clean & medical trust */
+            --primary-hover: #0f766e;
+            --primary-light: #f0fdfa;
+            --secondary: #0284c7; /* Clinical Blue */
+            --secondary-light: #f0f9ff;
+            --dark: #1e293b;
+            --gray-dark: #475569;
+            --gray: #64748b;
+            --gray-light: #cbd5e1;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --success: #10b981;
+            --error: #ef4444;
+            --accent: #f59e0b; /* Amber for highlights */
+            --font-family: 'Noto Sans JP', sans-serif;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-family); background-color: var(--bg-light); color: var(--dark); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+        a { color: inherit; text-decoration: none; transition: var(--transition); }
+        li { list-style: none; }
+        
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 80px 0; position: relative; }
+        
+        .grid { display: grid; gap: 32px; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+        @media (max-width: 992px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } section { padding: 60px 0; } }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-weight: 500; border-radius: 8px; border: none; cursor: pointer; transition: var(--transition); font-size: 16px; box-shadow: var(--shadow-sm); }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-secondary { background-color: var(--white); color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background-color: var(--primary-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-lg { padding: 16px 36px; font-size: 18px; font-weight: 700; border-radius: 12px; }
+        .btn i { margin-left: 8px; }
+
+        header { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--gray-light); position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-sm); }
+        header .container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        
+        .logo { display: flex; align-items: center; font-size: 20px; font-weight: 700; color: var(--primary); }
+        .logo i { font-size: 24px; margin-right: 10px; }
+        .logo-subtitle { font-size: 11px; font-weight: 400; color: var(--gray); display: block; margin-top: -2px; }
+        
+        .doctor-badge { background-color: var(--secondary-light); color: var(--secondary); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--secondary); margin-left: 15px; display: inline-flex; align-items: center; }
+        .doctor-badge i { margin-right: 4px; }
+
+        nav ul { display: flex; align-items: center; gap: 24px; }
+        nav a { font-weight: 500; color: var(--gray-dark); font-size: 15px; }
+        nav a:hover { color: var(--primary); }
+        @media (max-width: 992px) { nav { display: none; } }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%); overflow: hidden; border-bottom: 1px solid var(--gray-light); }
+        .hero-content { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+        .hero-tag { background-color: var(--secondary); color: var(--white); font-size: 14px; font-weight: 700; padding: 6px 16px; border-radius: 30px; margin-bottom: 24px; letter-spacing: 0.05em; display: inline-block; }
+        .hero-title { font-size: 38px; line-height: 1.4; font-weight: 700; color: var(--dark); margin-bottom: 20px; letter-spacing: -0.02em; }
+        .hero-title span { color: var(--primary); }
+        .hero-desc { font-size: 17px; color: var(--gray-dark); margin-bottom: 36px; max-width: 600px; }
+        .hero-buttons { display: flex; gap: 16px; }
+        @media (max-width: 768px) { .hero-title { font-size: 28px; } .hero-desc { font-size: 15px; } .hero-buttons { flex-direction: column; width: 100%; } .hero-buttons .btn { width: 100%; } }
+
+        /* Highlighting Box */
+        .usp-badge-container { background: var(--white); border-left: 4px solid var(--accent); padding: 15px 20px; border-radius: 0 12px 12px 0; margin-bottom: 25px; box-shadow: var(--shadow-sm); }
+        .usp-badge-title { font-weight: 700; color: var(--dark); font-size: 15px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+        .usp-badge-title i { color: var(--accent); }
+        .usp-badge-desc { font-size: 13px; color: var(--gray-dark); }
+
+        .medical-graphic { width: 100%; max-width: 480px; background-color: var(--white); border-radius: 24px; box-shadow: var(--shadow-xl); border: 1px solid rgba(13,148,136,0.1); padding: 30px; display: flex; flex-direction: column; gap: 20px; }
+        .graphic-title { font-size: 16px; font-weight: 700; color: var(--dark); display: flex; align-items: center; gap: 8px; }
+        .graphic-title i { color: var(--primary); }
+        .graphic-item { display: flex; align-items: center; gap: 15px; padding: 12px; background-color: var(--bg-light); border-radius: 12px; border: 1px solid #f1f5f9; }
+        .graphic-icon-box { width: 40px; height: 40px; background-color: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary); box-shadow: var(--shadow-sm); font-size: 18px; }
+        .graphic-item-name { font-size: 13px; font-weight: 700; color: var(--dark); }
+        .graphic-item-price { font-size: 11px; color: var(--gray); }
+        .graphic-badge { background-color: var(--primary); color: var(--white); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 30px; white-space: nowrap; }
+
+        /* Section Headers */
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px auto; }
+        .section-tag { color: var(--primary); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; display: block; }
+        .section-title { font-size: 30px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+        .section-desc { font-size: 16px; color: var(--gray); }
+
+        /* Strengths */
+        .strengths { background-color: var(--white); border-bottom: 1px solid var(--bg-light); }
+        .strength-card { background-color: var(--bg-light); border-radius: 16px; padding: 40px 30px; border: 1px solid #f1f5f9; transition: var(--transition); }
+        .strength-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); background-color: var(--white); border-color: var(--primary-light); }
+        .strength-icon { width: 60px; height: 60px; border-radius: 12px; background-color: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 24px; }
+        .strength-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 16px; }
+
+        /* Products & 2枚の大判画像対応複合メディアギャラリー */
+        .products { background-color: var(--bg-light); }
+        .attached-media-box { background: var(--white); border-radius: 20px; border: 1px solid #e2e8f0; padding: 30px; margin-bottom: 40px; box-shadow: var(--shadow-sm); text-align: center; }
+        .attached-media-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--dark); display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .attached-media-box h3 i { color: var(--primary); }
+        
+        /* 全体イメージ(depth-4)と全体の2番目(depth-5)を並べるプレミアムレイアウト */
+        .gallery-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .gallery-main-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
+        .gallery-sub-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
+        
+        @media (max-width: 768px) {
+            .gallery-container { grid-template-columns: 1fr; }
+        }
+
+        .product-card { background-color: var(--white); border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-direction: column; transition: var(--transition); position: relative; }
+        .product-card:hover { box-shadow: var(--shadow-xl); }
+        .product-badge { background-color: var(--dark); color: var(--white); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 4px; position: absolute; top: 20px; left: 20px; z-index: 10; }
+        
+        /* 商品画像専用のコンテナボックス（写真を美しく収める） */
+        .product-img-box { height: 240px; width: 100%; background-color: #fafafa; overflow: hidden; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0; }
+        .product-img-box img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+
+        .product-content { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-name { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .product-sku { font-size: 12px; color: var(--primary); font-weight: 700; margin-bottom: 12px; }
+        .product-desc { font-size: 14px; color: var(--gray); margin-bottom: 20px; min-height: 50px; }
+        
+        .pricing-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 20px; }
+        .pricing-table th, .pricing-table td { padding: 10px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+        .pricing-table th { color: var(--gray); font-weight: 500; background-color: var(--bg-light); }
+        .pricing-table tr.highlight { background-color: var(--primary-light); font-weight: 700; color: var(--primary); }
+
+        /* Calculator Grid */
+        .calculator { background: linear-gradient(135deg, var(--white) 0%, var(--primary-light) 100%); border-bottom: 1px solid var(--gray-light); }
+        .calc-wrapper { background-color: var(--white); border-radius: 24px; box-shadow: var(--shadow-xl); border: 1px solid rgba(13,148,136,0.1); overflow: hidden; display: grid; grid-template-columns: 1.3fr 1fr; }
+        @media (max-width: 992px) { .calc-wrapper { grid-template-columns: 1fr; } }
+        .calc-left { padding: 40px; border-right: 1px solid #f1f5f9; }
+        @media (max-width: 992px) { .calc-left { border-right: none; border-bottom: 1px solid #f1f5f9; } }
+        .calc-right { padding: 40px; background-color: #fdfdfd; display: flex; flex-direction: column; justify-content: center; border-left: 6px solid var(--primary); }
+        
+        .calc-row-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f1f5f9; gap: 15px; }
+        .calc-row-item:last-of-type { margin-bottom: 15px; }
+        .calc-product-title { font-weight: 500; font-size: 14px; }
+        .calc-qty-ctrl { display: flex; align-items: center; gap: 8px; }
+        .calc-qty-btn { width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--gray-light); background: var(--white); cursor: pointer; font-weight: bold; font-size: 16px; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .calc-qty-btn:hover { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+        .calc-qty-val { width: 45px; height: 32px; text-align: center; font-weight: 700; border: 1px solid var(--gray-light); border-radius: 6px; font-size: 14px; outline: none; }
+        
+        .summary-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--bg-light); display: flex; align-items: center; gap: 8px; }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; }
+        .summary-row.total { margin-top: 15px; border-top: 2px dashed var(--gray-light); padding-top: 15px; font-weight: 700; font-size: 24px; color: var(--primary); }
+
+        /* Order Flow */
+        .flow { background-color: var(--white); border-bottom: 1px solid var(--bg-light); }
+        .flow-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; position: relative; }
+        @media (max-width: 992px) { .flow-grid { grid-template-columns: 1fr; gap: 35px; } }
+        .flow-step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
+        .flow-num { width: 44px; height: 44px; border-radius: 50%; background-color: var(--white); color: var(--primary); border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; margin-bottom: 15px; z-index: 2; box-shadow: var(--shadow-sm); transition: var(--transition); }
+        .flow-step.active .flow-num { background-color: var(--primary); color: var(--white); }
+        .flow-step h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+        .flow-step p { font-size: 12px; color: var(--gray); line-height: 1.5; }
+        .flow-grid::after { content: ''; position: absolute; top: 22px; left: 8%; width: 84%; height: 2px; background-color: #e2e8f0; z-index: 1; }
+        @media (max-width: 992px) { .flow-grid::after { display: none; } .flow-step::after { content: ''; position: absolute; bottom: -25px; left: 50%; width: 2px; height: 15px; background-color: #e2e8f0; } .flow-step:last-child::after { display: none; } }
+
+        /* Notice Section */
+        .notice-section { background-color: var(--bg-light); border-bottom: 1px solid var(--gray-light); }
+        .notice-box { background-color: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-md); border: 1px solid #e2e8f0; }
+        .notice-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; color: var(--primary); }
+        .notice-list { display: flex; flex-direction: column; gap: 16px; }
+        .notice-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; }
+        .notice-item i { color: var(--primary); margin-top: 4px; }
+
+        /* FAQ */
+        .faq { background-color: var(--white); border-bottom: 1px solid var(--bg-light); }
+        .faq-item { border-bottom: 1px solid #f1f5f9; padding: 20px 0; }
+        .faq-question { font-size: 15px; font-weight: 700; color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+        .faq-question i { transition: var(--transition); color: var(--primary); }
+        .faq-answer { font-size: 14px; color: var(--gray-dark); margin-top: 12px; max-height: 0; overflow: hidden; transition: var(--transition); line-height: 1.6; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        /* Contact Form */
+        .contact { background: linear-gradient(135deg, var(--primary-light) 0%, #e0f2fe 100%); }
+        .contact-form-wrapper { background-color: var(--white); border-radius: 24px; padding: 40px; box-shadow: var(--shadow-xl); border: 1px solid rgba(13,148,136,0.1); max-width: 800px; margin: 0 auto; }
+        .form-row-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px; }
+        @media (max-width: 576px) { .form-row-2 { grid-template-columns: 1fr; gap: 0; } }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .form-group label span { color: var(--error); margin-left: 4px; font-size: 12px; }
+        .form-control { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--gray-light); outline: none; font-family: var(--font-family); font-size: 14px; transition: var(--transition); }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+        
+        .zip-loading { color: var(--secondary); font-size: 12px; display: none; margin-top: 4px; font-weight: bold; }
+        
+        .file-upload-wrapper { border: 2px dashed var(--gray-light); border-radius: 8px; padding: 24px; text-align: center; background-color: var(--bg-light); cursor: pointer; transition: var(--transition); position: relative; }
+        .file-upload-wrapper:hover { border-color: var(--primary); background-color: var(--white); }
+        .file-upload-wrapper i { font-size: 32px; color: var(--gray); margin-bottom: 10px; }
+        .file-upload-wrapper input[type=file] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+        .file-uploaded-status { display: none; align-items: center; justify-content: center; gap: 10px; font-size: 14px; color: var(--success); font-weight: 700; margin-top: 10px; }
+        .form-consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--gray-dark); margin-bottom: 24px; }
+        .form-consent input { margin-top: 4px; accent-color: var(--primary); width: 16px; height: 16px; flex-shrink: 0; }
+
+        /* Modals for Document Links */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(30, 41, 59, 0.7); backdrop-filter: blur(4px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: var(--transition); }
+        .modal-overlay.open { opacity: 1; pointer-events: auto; }
+        .modal-box { background-color: var(--white); border-radius: 16px; padding: 40px; box-shadow: var(--shadow-xl); max-width: 600px; width: 90%; text-align: left; transform: scale(0.9); transition: var(--transition); max-height: 85vh; overflow-y: auto; }
+        .modal-overlay.open .modal-box { transform: scale(1); }
+        .modal-box h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 15px; border-bottom: 2px solid var(--primary-light); padding-bottom: 8px; text-align: center; }
+        .modal-body-text { font-size: 13px; color: var(--gray-dark); line-height: 1.6; margin-bottom: 20px; }
+        .modal-body-text h5 { font-size: 14px; font-weight: bold; color: var(--dark); margin: 12px 0 4px 0; }
+        .modal-box .btn { width: 100%; }
+
+        footer { background-color: var(--dark); color: #94a3b8; padding: 60px 0 20px 0; border-top: 1px solid #334155; font-size: 13px; }
+        footer h4 { color: var(--white); font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+        footer ul { display: flex; flex-direction: column; gap: 10px; }
+        footer a:hover { color: var(--white); }
+        .footer-logo { color: var(--white); font-size: 18px; font-weight: 700; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 6px; }
+        .footer-logo i { color: var(--primary); }
+        .footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; }
+        @media (max-width: 768px) { .footer-bottom { flex-direction: column; gap: 15px; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-truck-ramp-box"></i>
+                <div>
+                    MLS <span class="logo-subtitle">ウルセラ消耗品（トランスデューサー）販売専門</span>
+                </div>
+            </a>
+            <div class="doctor-badge">
+                <i class="fa-solid fa-user-md"></i> 医師免許保有者限定個人輸入
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#strengths">サービス特徴</a></li>
+                    <li><a href="#products">取扱製品</a></li>
+                    <li><a href="#calculator">概算見積</a></li>
+                    <li><a href="#flow">ご利用の流れ</a></li>
+                    <li><a href="#faq">よくある質問</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px; box-shadow: none;">発注・見積依頼</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container grid grid-2">
+            <div class="hero-content">
+                <span class="hero-tag"><i class="fa-solid fa-shield-halved"></i> 米国正規品並行輸入ルート</span>
+                <h1 class="hero-title">
+                    ウルセラ消耗品<br>
+                    <span>トランスデューサー専門</span><br>
+                    安心のシリアル写真付請求システム
+                </h1>
+                
+                <div class="usp-badge-container">
+                    <div class="usp-badge-title">
+                        <i class="fa-solid fa-camera"></i> 国内ライバルを圧倒する「超安心・迅速」供給体制
+                    </div>
+                    <div class="usp-badge-desc">
+                        米国オフィス到着時に<b>シリアル番号・有効期限の現物写真</b>を提供。さらに<b>決済完了後、10日前後という圧倒的な短納期</b>で御院に直接お届けいたします。
+                    </div>
+                </div>
+
+                <p class="hero-desc">
+                    薬監証明申請等の手続きは輸入代行業者の「DEPARTURES株式会社」が完全代行。中間マージンをカットした適正な米ドル建価格でお届けします。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#calculator" class="btn btn-primary btn-lg">概算シミュレーター <i class="fa-solid fa-calculator"></i></a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">発注・見積を依頼する</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container">
+                <div class="medical-graphic">
+                    <div class="graphic-title">
+                        <i class="fa-solid fa-circle-check"></i> 取扱トランスデューサー一覧
+                    </div>
+                    <div class="graphic-item">
+                        <div class="graphic-icon-box"><i class="fa-solid fa-wave-square"></i></div>
+                        <div class="graphic-item-details">
+                            <div class="graphic-item-name">7-3.0mm (UT-1)</div>
+                            <div class="graphic-item-price">真皮深層ターゲット / 2,400発</div>
+                        </div>
+                        <span class="graphic-badge">2個〜 $2,700</span>
+                    </div>
+                    <div class="graphic-item">
+                        <div class="graphic-icon-box"><i class="fa-solid fa-wave-square"></i></div>
+                        <div class="graphic-item-details">
+                            <div class="graphic-item-name">4-4.5mm (UT-2)</div>
+                            <div class="graphic-item-price">SMAS筋膜層ターゲット / 2,400発</div>
+                        </div>
+                        <span class="graphic-badge">2個〜 $2,700</span>
+                    </div>
+                    <div class="graphic-item">
+                        <div class="graphic-icon-box"><i class="fa-solid fa-wave-square"></i></div>
+                        <div class="graphic-item-details">
+                            <div class="graphic-item-name">10-1.5mm (UT-4)</div>
+                            <div class="graphic-item-price">皮膚浅層・目元ターゲット / 2,400発</div>
+                        </div>
+                        <span class="graphic-badge">2個〜 $2,700</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths -->
+    <section id="strengths" class="strengths">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Strengths</span>
+                <h2 class="section-title">御院のウルセラ運用コストを劇的に下げる理由</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="strength-card">
+                    <div class="strength-icon"><i class="fa-solid fa-images"></i></div>
+                    <h3>納品前の実物写真送付システム</h3>
+                    <p>米国カリフォルニアのオフィスに製品が到着した段階で、外装だけでなく「シリアル番号」および「有効期限」を鮮明に撮影した写真をご案内。現物確認ができるため、並行輸入の不安を完全に解消します。</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>決済後10日前後のスピード配送</h3>
+                    <p>他社を圧倒する独自流通ルートにより、Stripe決済または銀行振込完了から約10日前後でクリニックへダイレクト納品。ストック切れによる予約機会損失を最小限に防ぎます。</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <h3>明確な2段階の米ドル数量割引</h3>
+                    <p>3つ全ての規格において同一のクリアな価格テーブルを採用。まとめてのご発注はもちろん、クリニックの定期発注サイクルに合わせやすい2個からのディスカウント価格を設定しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Lineup</span>
+                <h2 class="section-title">ウルセラ トランスデューサー（3種類）</h2>
+                <p class="section-desc">米国ディストリビューター公認ルートからの純正並行輸入品。全て2,400ショットのフル仕様です。</p>
+            </div>
+            
+            <!-- 二重拡張子（.jpg.jpg）のバグでも100%読み込める超安全セマンティック・画像表示システム -->
+            <div class="attached-media-box">
+                <h3><i class="fa-solid fa-diagram-project"></i> 照射深度と対応カートリッジの特徴</h3>
+                <div class="gallery-container">
+                    <!-- 全体イメージ(depth-4) -->
+                    <div class="gallery-main-visual">
+                        <img src="depth-4.jpg" onerror="this.src='depth-4.jpg.jpg'" alt="ウルセラ 照射深度・カートリッジ全体イメージ構造図">
+                    </div>
+                    <!-- 全体の2番目(depth-5) -->
+                    <div class="gallery-sub-visual">
+                        <img src="depth-5.jpg" onerror="this.src='depth-5.jpg.jpg'" alt="ウルセラ カートリッジ全体イメージ 2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- UT-1 (7-3.0mm) ➡ 画像: depth-2.jpg -->
+                <div class="product-card">
+                    <span class="product-badge">2,400発 フル</span>
+                    <div class="product-img-box">
+                        <img src="depth-2.jpg" onerror="this.src='depth-2.jpg.jpg'" alt="Ulthera Transducer 7-3.0mm (UT-1)">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-name">Ulthera Transducer 7-3.0mm</h3>
+                        <div class="product-sku">型番: UT-1</div>
+                        <p class="product-desc">主として真皮深層への正確な熱アプローチを行うトランスデューサーです。</p>
+                        <table class="pricing-table">
+                            <tr><th>注文数</th><th>単価(USD)</th></tr>
+                            <tr><td>2〜5個</td><td>$2,700</td></tr>
+                            <tr class="highlight"><td>6個以上</td><td>$2,500</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- UT-2 (4-4.5mm) ➡ 画像: depth-3.jpg -->
+                <div class="product-card">
+                    <span class="product-badge">2,400発 フル</span>
+                    <div class="product-img-box">
+                        <img src="depth-3.jpg" onerror="this.src='depth-3.jpg.jpg'" alt="Ulthera Transducer 4-4.5mm (UT-2)">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-name">Ulthera Transducer 4-4.5mm</h3>
+                        <div class="product-sku">型番: UT-2</div>
+                        <p class="product-desc">リフトアップ治療の要となるSMAS（筋膜）層へ熱エネルギーを届けるコアパーツです。</p>
+                        <table class="pricing-table">
+                            <tr><th>注文数</th><th>単価(USD)</th></tr>
+                            <tr><td>2〜5個</td><td>$2,700</td></tr>
+                            <tr class="highlight"><td>6個以上</td><td>$2,500</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- UT-4 (10-1.5mm) ➡ 画像: depth-1.jpg -->
+                <div class="product-card">
+                    <span class="product-badge">2,400発 フル</span>
+                    <div class="product-img-box">
+                        <img src="depth-1.jpg" onerror="this.src='depth-1.jpg.jpg'" alt="Ulthera Transducer 10-1.5mm (UT-4)">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-name">Ulthera Transducer 10-1.5mm</h3>
+                        <div class="product-sku">型番: UT-4</div>
+                        <p class="product-desc">皮膚浅層、または目元などのデリケートで薄いエリアへのタイトニング照射に使用します。</p>
+                        <table class="pricing-table">
+                            <tr><th>注文数</th><th>単価(USD)</th></tr>
+                            <tr><td>2〜5個</td><td>$2,700</td></tr>
+                            <tr class="highlight"><td>6個以上</td><td>$2,500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simulation</span>
+                <h2 class="section-title">規格組み合わせ対応・概算シミュレーター</h2>
+                <p class="section-desc">各型番の必要数量を入力してください。合計数に応じた単価および送料が自動的に適用されます。</p>
+            </div>
+            
+            <div class="calc-wrapper">
+                <div class="calc-left">
+                    <div style="font-size:13px; font-weight:bold; margin-bottom:15px; color:var(--gray-dark);">
+                        ※トータル2個以上からご注文を承ります。
+                    </div>
+                    
+                    <div class="calc-row-item">
+                        <div class="calc-product-title">7-3.0mm (UT-1)</div>
+                        <div class="calc-qty-ctrl">
+                            <button class="calc-qty-btn" onclick="stepQty('ut1', -1)">-</button>
+                            <input type="number" id="qty-ut1" class="calc-qty-val" value="2" min="0" onchange="updateCalc()">
+                            <button class="calc-qty-btn" onclick="stepQty('ut1', 1)">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-row-item">
+                        <div class="calc-product-title">4-4.5mm (UT-2)</div>
+                        <div class="calc-qty-ctrl">
+                            <button class="calc-qty-btn" onclick="stepQty('ut2', -1)">-</button>
+                            <input type="number" id="qty-ut2" class="calc-qty-val" value="2" min="0" onchange="updateCalc()">
+                            <button class="calc-qty-btn" onclick="stepQty('ut2', 1)">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-row-item">
+                        <div class="calc-product-title">10-1.5mm (UT-4)</div>
+                        <div class="calc-qty-ctrl">
+                            <button class="calc-qty-btn" onclick="stepQty('ut4', -1)">-</button>
+                            <input type="number" id="qty-ut4" class="calc-qty-val" value="0" min="0" onchange="updateCalc()">
+                            <button class="calc-qty-btn" onclick="stepQty('ut4', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calc-right">
+                    <h3 class="summary-title"><i class="fa-solid fa-calculator"></i> 概算お見積り結果</h3>
+                    <div class="summary-row"><span class="summary-label">総発注数量:</span><span id="res-total-qty" style="font-weight:bold;">4 個</span></div>
+                    <div class="summary-row"><span class="summary-label">適用単価:</span><span id="res-unit-price">$2,700 /個</span></div>
+                    <div class="summary-row"><span class="summary-label">商品小計:</span><span id="res-subtotal">$10,800</span></div>
+                    <div class="summary-row"><span class="summary-label">送料:</span><span id="res-shipping">$175</span></div>
+                    <div class="summary-row"><span class="summary-label">輸入諸経費:</span><span id="res-overhead">$90</span></div>
+                    
+                    <div class="summary-row total">
+                        <span style="color:var(--dark); font-size:16px;">概算見積合計:</span>
+                        <span id="res-grand-total">$11,065</span>
+                    </div>
+                    
+                    <div style="font-size:11px; color:var(--gray); text-align:right; margin-bottom:15px;">
+                        ※消費税、振込・決済手数料は別途算出され請求書に加算されます。
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary btn-lg" onclick="syncAndScroll()">この内容で注文・見積依頼へ <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="flow" class="flow">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Workflow</span>
+                <h2 class="section-title">ご注文からお届けまでの流れ</h2>
+            </div>
+            <div class="flow-grid">
+                <div class="flow-step active"><div class="flow-num">1</div><h4>Web発注・見積依頼</h4><p>下部フォームより必要事項、組み合わせ内訳等を入力し送信。</p></div>
+                <div class="flow-step active"><div class="flow-num">2</div><h4>ご注文確定のご案内</h4><p>弊社よりご注文確定のご案内をメールで送信。※納期は約2週間となります。</p></div>
+                <div class="flow-step active"><div class="flow-num">3</div><h4>実物写真確認และ請求書発行</h4><p>米国オフィス到着後、シリアル・有効期限の写真と当日の為替レート(TTS)を適用した請求書を送付。2営業日以内に決済。</p></div>
+                <div class="flow-step active"><div class="flow-num">4</div><h4>薬監証明申請・通関</h4><p>入金確認次第、即時空輸。輸入手続きはDEPARTURES株式会社が完全代行。</p></div>
+                <div class="flow-step active"><div class="flow-num">5</div><h4>クリニックにお届け</h4><p>決済完了後、約10日前後で税関を通過し、院へ直接配送されます。</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notices -->
+    <section class="notice-section">
+        <div class="container">
+            <div class="notice-box">
+                <div class="notice-header">
+                    <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                    <h3>医師の個人輸入特例措置と諸条件について</h3>
+                </div>
+                <div class="notice-list">
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>自己の患者の診断又は治療に使用するために個人輸入:</b> ウルセラ消耗品の個人輸入は、医師本人が自己の患者の診断又は治療に使用することを前提とした特例措置です。第三者への転売や譲渡は法律で固く禁止されています。</div></div>
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>薬監証明の完全代行:</b> 地方厚生局への書類提出や複雑な通関手続き交渉は、系列の国内法人<b>「DEPARTURES 株式会社」</b>がすべて代行・サポートいたします。</div></div>
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>医師免許証のご確認:</b> 適法運用の基本条件として、初回発注時に必ず「医師免許証の写し」をご提示いただきます。</div></div>
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>為替レート適用基準:</b> 請求書発行日当日の「りそな銀行公示 TTSレート」が計算基準となります。</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">よくあるご質問</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question"><span>Q1. 本当にメーカー純正の正規品ですか？並行輸入品と何が違いますか？</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>商品は正規品ですが、未承認機器のため全て並行輸入品になります。商品は米国の正規品の並行輸入となります。また、正規品証明可能なロット番号などは存在しません。一部中国や韓国（コピー品が多い国）ではロット番号などが存在するようですが、日本国内や米国・欧州には存在しません。</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Q2. 厚生労働局への書類提出や交渉はMLSに丸投げできますか？</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>はい。厚生労働局への書類提出や交渉は輸入代行業者の「DEPARTURES 株式会社」が全面的に代行・担当いたしますのでご安心ください。</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Q3. 支払時期と決済方法の詳細を教えてください。</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>ご注文いただいた商品が弊社（米国カリフォルニア州）のオフィスに到着後、シリアル番号の写真と請求書（当日の為替レート適用）をメールで送信いたします。2営業日までにお支払いください。<br><br>決済方法：お振込みの場合は、日本国内の輸入代行会社へお振込みください。クレジットカード決済ご希望の方には、お支払い用 Stripe Checkout 決済リンクをご案内します。<br>※クレジットカード決済の場合、別途2.3%の手数料がかかります。初回のみ、当社が負担しカード決済手数料はサービスとさせていただきます。</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Q4. 注文から手元に届くまでに何日かかりますか？</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>お支払い完了後、10日前後でご指定のクリニックにお届けいたします。発注から合計2〜3週間前後の予定でございます。</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Q5. 初期不良や照射途中のエラー等の不具合保証はどうなっていますか？</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <p>万が一、空輸中のパッケージ破損や、装着時のシステム読み込みエラー（未照射の初期不良）が発生した場合は、速やかに代替品の無償発送または返金の対応をいたします。使用後の不具合についての保証は、メーカー有効期限内のみ補償対象となります。また、照射残数が100LINE未満の場合は補償対象外となります。<br><br>
+                        ●照射残数100LINE以上の場合、LINE単価×LINE残数にて次回の注文時に相殺させていただきます。（例: $2,500で購入、故障時残数1,000発の場合 ➡ $2,500 ÷ 2,400 × 1,000 = $1,041 保証金額）<br>
+                        ●エコー画像（映らない、暗い、鮮明ではない等）の不具合は保証対象外となります。<br>
+                        ●商品到着後3日以内に検品をお願いします。商品到着後3日以降の欠品、誤発注品、外損（水漏れ、照射面の傷み、破損）は保証対象外となりますのでご注意ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Order Form</span>
+                <h2 class="section-title">発注・お見積り依頼フォーム</h2>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="inquiry-form">
+                    <div class="form-group">
+                        <label for="form-spec">ご希望のトランスデューサー内訳（合計2個以上） <span>*</span></label>
+                        <textarea id="form-spec" class="form-control" rows="3" placeholder="例: 7-3.0mm を2個、4-4.5mm を2個 希望" required></textarea>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group"><label for="form-clinic">クリニック・医療機関名 <span>*</span></label><input type="text" id="form-clinic" class="form-control" required></div>
+                        <div class="form-group"><label for="form-doctor">医師氏名 (医籍登録名義) <span>*</span></label><input type="text" id="form-doctor" class="form-control" required></div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group"><label for="form-email">メールアドレス <span>*</span></label><input type="email" id="form-email" class="form-control" required></div>
+                        <div class="form-group"><label for="form-phone">電話番号 <span>*</span></label><input type="tel" id="form-phone" class="form-control" placeholder="例：0312345678 (ハイフンなし)" required></div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="form-zip">郵便番号 <span>*</span></label>
+                            <input type="text" id="form-zip" class="form-control" placeholder="例：1000001 (ハイフンなし7桁)" oninput="autoAddress()" required>
+                            <div id="zip-loading" class="zip-loading"><i class="fa-solid fa-spinner fa-spin"></i> 住所を自動入力中...</div>
+                        </div>
+                        <div class="form-group"><label for="form-address">配送先住所 (院内住所) <span>*</span></label><input type="text" id="form-address" class="form-control" required></div>
+                    </div>
+                    
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="form-sub-contact">ご担当者名 <span>(医師氏名と異なる場合のみ)</span></label>
+                            <input type="text" id="form-sub-contact" class="form-control" placeholder="例：事務長 山田花子">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-mobile">ご担当者携帯番号 もしくは 医籍登録医師の携帯番号 <span>*</span></label>
+                            <input type="tel" id="form-mobile" class="form-control" placeholder="例：09012345678 (ハイフンなし)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>医師免許証（写し）の添付 <span>(初回時必須)</span></label>
+                        <div class="file-upload-wrapper">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <div class="file-upload-text">ファイルをドラッグ＆ドロップまたはクリックして選択</div>
+                            <input type="file" id="form-file" accept="image/*,.pdf">
+                        </div>
+                        <div class="file-uploaded-status" id="file-status"><i class="fa-solid fa-circle-check"></i> <span id="file-name"></span></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-message">その他ご要望・お問い合わせ（ご質問や機器買取査定の希望などございましたらご記入ください）</label>
+                        <textarea id="form-message" class="form-control" rows="3" placeholder="当社は美容医療機器の買取も行っております。特に未承認機器につきましてはアメリカ向けに買取らさせていただきます。査定希望の機器名等があればご記入ください。"></textarea>
+                    </div>
+                    <div class="form-consent">
+                        <input type="checkbox" id="form-agree" required>
+                        <label for="form-agree">自己の患者 of 診断又は治療に使用するために個人輸入を委任すること、および各種規約・免責事項に同意します。</label>
+                    </div>
+                    <div style="text-align: center;"><button type="submit" id="form-submit-btn" class="btn btn-primary btn-lg" style="width: 100%; max-width: 320px;">発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i></button></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container grid grid-3">
+            <div>
+                <div class="footer-logo"><i class="fa-solid fa-truck-ramp-box"></i> Departures KIX Inc.</div>
+                <p class="footer-about">
+                    当社はアメリカのディストリビューターとして、日本をはじめ、韓国、タイ、中国、ベトナム他に美容医療機器や付属する消耗品等を販売しております。特にウルセラの消耗品（トランスデューサー）はお求めやすい価格にて提供させていただいております。また、日本には系列会社（DEPARTURES 株式会社）の法人がございます。系列会社を通じてきめ細かいサービスで対応させていただきます。
+                </p>
+            </div>
+            <div>
+                <h4>規格ラインナップ</h4>
+                <ul>
+                    <li><a href="#products">7-3.0mm (UT-1)</a></li>
+                    <li><a href="#products">4-4.5mm (UT-2)</a></li>
+                    <li><a href="#products">10-1.5mm (UT-4)</a></li>
+                    <li><a href="#calculator">価格シミュレーター</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>当サイト運営会社情報</h4>
+                <p style="color: #94a3b8; line-height: 1.8;">
+                    <strong>Departures KIX Inc.</strong><br>
+                    代表: Kevin Furukawa<br>
+                    住所: 45839 Corte Carmello Temecula, CA 92592 USA<br>
+                    Email: departuresincus@gmail.com
+                </p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div>&copy; 2026 Departures KIX Inc. All Rights Reserved.</div>
+            <div style="display: flex; gap: 20px;">
+                <a href="javascript:void(0)" onclick="openModal('legal-modal')">特定商取引法に基づく表記</a>
+                <a href="javascript:void(0)" onclick="openModal('privacy-modal')">プライバシーポリシー</a>
+                <a href="javascript:void(0)" onclick="openModal('disclaimer-modal')">医師個人輸入の免責事項</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 各種規約用ポップアップモーダル -->
+    <div class="modal-overlay" id="legal-modal">
+        <div class="modal-box">
+            <h3>特定商取引法に基づく表記</h3>
+            <div class="modal-body-text">
+                <h5>当サイト運営会社</h5><p>Departures KIX Inc.</p>
+                <h5>代表者</h5><p>Kevin Furukawa</p>
+                <h5>住所</h5><p>45839 Corte Carmello Temecula, CA 92592 USA</p>
+                <h5>メールアドレス</h5><p>departuresincus@gmail.com</p>
+                <h5>代金以外の必要料金</h5><p>送料（米ドル建）、輸入諸経費（\$90.00）、日本の国内消費税（別途ご請求）、銀行振込手数料またはクレジットカード決済手数料（2.3%※初回限定で当社負担サービス）。</p>
+                <h5>商品お届け時期</h5><p>米国オフィス到着後、シリアル写真確認および決済完了確認後、10日前後で御院へ配送。</p>
+                <h5>保証・キャンセルについて</h5><p>未照射の初期不良や空輸時破損は無償代替発送対応。到着後3日以内の検品が必須となります（詳細はFAQ参照）。</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal('legal-modal')">閉じる</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="privacy-modal">
+        <div class="modal-box">
+            <h3>プライバシーポリシー</h3>
+            <div class="modal-body-text">
+                <p>Departures KIX Inc.および系列法人（DEPARTURES株式会社）は、お申し込み時にご提示いただくクリニック情報、医師確認書類（医師免許証の写し）、ならびに個人情報を、管轄厚生局への薬監証明申請、税関通関手続き、および商品配送に関わる業務以外の目的で利用、または第三者へ提供・開示することはいたしません。関連法令に則り、安全かつ適切に管理いたします。</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal('privacy-modal')">閉じる</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="disclaimer-modal">
+        <div class="modal-box">
+            <h3>医師個人輸入に関する免責事項</h3>
+            <div class="modal-body-text">
+                <p>本サイトが個人輸入代行を行うウルセラ用トランスデューサーは、国内未承認医療機器パーツであり、厚生労働省の個人輸入特例措置のもと、医師個人の資格において自己の責任下で臨床使用されるものです。使用に伴う直接的または間接的なトラブル、機器本体へのエラー等に関し、当社は製品不具合保証規約（FAQ記載）を超える範囲の法的責任や損害賠償義務を負いません。御院の十分な管理のもとご使用ください。</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal('disclaimer-modal')">閉じる</button>
+        </div>
+    </div>
+
+    <!-- 送信成功ダイアログ -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-box" style="text-align:center;">
+            <div style="font-size:40px; color:var(--primary); margin-bottom:15px;"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>受領いたしました</h3>
+            <p style="font-size:14px; margin-bottom:20px; text-align:left; line-height:1.6;">
+                Departures KIX Inc.の医師輸入窓口にて内容を受領しました。後ほど担当よりご連絡させていただきます。
+            </p>
+            <button class="btn btn-primary" onclick="closeModal('success-modal')">閉じる</button>
+        </div>
+    </div>
+
+    <script>
+        // Google Apps Script (GAS) のWebアプリURLをここに貼り付けると本稼働します。
+        const GAS_WEB_APP_URL = https://script.google.com/macros/s/AKfycbxi_BFto8bbjjsyh4jQiYgvU6-P3DW2nDcNSVStxbZXVDjbWuXrj4hcq6hdt2FvmFel-A/exec;
+
+        // 郵便番号から住所を自動入力するロジック
+        function autoAddress() {
+            const zipInput = document.getElementById('form-zip').value.replace(/[^0-9]/g, '');
+            const addressInput = document.getElementById('form-address');
+            const loadingLabel = document.getElementById('zip-loading');
+            
+            if (zipInput.length === 7) {
+                loadingLabel.style.display = 'block';
+                fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipInput}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        loadingLabel.style.display = 'none';
+                        if (data.results && data.results[0]) {
+                            const res = data.results[0];
+                            addressInput.value = res.address1 + res.address2 + res.address3;
+                        }
+                    })
+                    .catch(error => {
+                        loadingLabel.style.display = 'none';
+                        console.error("住所自動入力エラー:", error);
+                    });
+            }
+        }
+
+        // シミュレーター動的計算ロジック
+        function stepQty(id, change) {
+            const input = document.getElementById('qty-' + id);
+            let val = parseInt(input.value) + change;
+            if (val < 0) val = 0;
+            input.value = val;
+            updateCalc();
+        }
+
+        function updateCalc() {
+            const ut1 = parseInt(document.getElementById('qty-ut1').value) || 0;
+            const ut2 = parseInt(document.getElementById('qty-ut2').value) || 0;
+            const ut4 = parseInt(document.getElementById('qty-ut4').value) || 0;
+            
+            const totalQty = ut1 + ut2 + ut4;
+            
+            let unitPrice = 2700;
+            if (totalQty >= 6) { unitPrice = 2500; }
+            
+            let shipping = 0;
+            if (totalQty > 0) { shipping = (totalQty <= 4) ? 175 : 225; }
+            
+            const overhead = totalQty > 0 ? 90 : 0;
+            const subtotal = totalQty * unitPrice;
+            const grandTotal = subtotal + shipping + overhead;
+            
+            document.getElementById('res-total-qty').innerText = totalQty + " 個";
+            document.getElementById('res-unit-price').innerText = "$" + unitPrice.toLocaleString() + " /個";
+            document.getElementById('res-subtotal').innerText = "$" + subtotal.toLocaleString();
+            document.getElementById('res-shipping').innerText = "$" + shipping.toLocaleString();
+            document.getElementById('res-overhead').innerText = "$" + overhead.toLocaleString();
+            document.getElementById('res-grand-total').innerText = "$" + grandTotal.toLocaleString();
+        }
+
+        function syncAndScroll() {
+            const ut1 = document.getElementById('qty-ut1').value;
+            const ut2 = document.getElementById('qty-ut2').value;
+            const ut4 = document.getElementById('qty-ut4').value;
+            document.getElementById('form-spec').value = `7-3.0mm(UT-1): ${ut1}個 / 4-4.5mm(UT-2): ${ut2}個 / 10-1.5mm(UT-4): ${ut4}個希望`;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // FAQアコーディオン
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        function openModal(id) { document.getElementById(id).classList.add('open'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+        // ファイル添付検知
+        const fileInput = document.getElementById('form-file');
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                document.getElementById('file-name').innerText = e.target.files[0].name;
+                document.getElementById('file-status').style.display = 'flex';
+            }
+        });
+
+        // フォーム発信処理
+        document.getElementById('inquiry-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('form-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerText = "送信中...";
+
+            const formData = {
+                spec: document.getElementById('form-spec').value,
+                clinic: document.getElementById('form-clinic').value,
+                doctor: document.getElementById('form-doctor').value,
+                email: document.getElementById('form-email').value,
+                phone: document.getElementById('form-phone').value,
+                zip: document.getElementById('form-zip').value,
+                address: document.getElementById('form-address').value,
+                sub_contact: document.getElementById('form-sub-contact').value,
+                mobile: document.getElementById('form-mobile').value,
+                message: document.getElementById('form-message').value
+            };
+
+            if(GAS_WEB_APP_URL !== "ここにあなたのGASのURLを貼り付けます") {
+                fetch(GAS_WEB_APP_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                }).then(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                    openModal('success-modal');
+                    document.getElementById('inquiry-form').reset();
+                    document.getElementById('file-status').style.display = 'none';
+                }).catch(err => {
+                    alert("送信エラーが発生しました。");
+                    submitBtn.disabled = false;
+                });
+            } else {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                    openModal('success-modal');
+                    document.getElementById('inquiry-form').reset();
+                    document.getElementById('file-status').style.display = 'none';
+                }, 1000);
+            }
+        });
+
+        updateCalc();
+    </script>
+</body>
+</html>
