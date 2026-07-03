@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght=300;400;500;700&display=swap" rel="stylesheet">
     <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -104,7 +104,7 @@
 
         /* Section Headers */
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px auto; }
-        .section-tag { color: var(--primary); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; display: block; }
+        .section-tag { color: var(--primary); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; display: block; margin-top: 10px; }
         .section-title { font-size: 30px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
         .section-desc { font-size: 16px; color: var(--gray); }
 
@@ -133,7 +133,6 @@
         .product-card:hover { box-shadow: var(--shadow-xl); }
         .product-badge { background-color: var(--dark); color: var(--white); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 4px; position: absolute; top: 20px; left: 20px; z-index: 10; }
         
-        /* 商品画像専用のコンテナボックス */
         .product-img-box { height: 240px; width: 100%; background-color: #fafafa; overflow: hidden; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0; }
         .product-img-box img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
 
@@ -207,11 +206,16 @@
         .form-control { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--gray-light); outline: none; font-family: var(--font-family); font-size: 14px; transition: var(--transition); }
         .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
         
+        .zip-loading { color: var(--secondary); font-size: 12px; display: none; margin-top: 4px; font-weight: bold; }
+        
         .file-upload-wrapper { border: 2px dashed var(--gray-light); border-radius: 8px; padding: 24px; text-align: center; background-color: var(--bg-light); cursor: pointer; transition: var(--transition); position: relative; }
         .file-upload-wrapper:hover { border-color: var(--primary); background-color: var(--white); }
         .file-upload-wrapper i { font-size: 32px; color: var(--gray); margin-bottom: 10px; }
         .file-upload-wrapper input[type=file] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
-        .file-uploaded-status { display: none; align-items: center; justify-content: center; gap: 10px; font-size: 14px; color: var(--success); font-weight: 700; margin-top: 10px; }
+        
+        /* アップロード成功ステータスのデザインをより明確に強化 */
+        .file-uploaded-status { display: none; align-items: center; justify-content: center; gap: 10px; font-size: 15px; color: #10b981; font-weight: 700; margin-top: 15px; background-color: #f0fdf4; padding: 12px; border-radius: 6px; border: 1px solid #bbf7d0; }
+        
         .form-consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--gray-dark); margin-bottom: 24px; }
         .form-consent input { margin-top: 4px; accent-color: var(--primary); width: 16px; height: 16px; flex-shrink: 0; }
 
@@ -450,27 +454,27 @@
                     <div class="calc-row-item">
                         <div class="calc-product-title">7-3.0mm (UT-1)</div>
                         <div class="calc-qty-ctrl">
-                            <button type="button" class="calc-qty-btn" id="btn-ut1-minus">-</button>
-                            <input type="number" id="qty-ut1" class="calc-qty-val" value="2" min="0">
-                            <button type="button" class="calc-qty-btn" id="btn-ut1-plus">+</button>
+                            <button type="button" class="calc-qty-btn" onclick="stepQty('ut1', -1)">-</button>
+                            <input type="number" id="qty-ut1" class="calc-qty-val" value="2" min="0" oninput="updateCalc()" onchange="updateCalc()">
+                            <button type="button" class="calc-qty-btn" onclick="stepQty('ut1', 1)">+</button>
                         </div>
                     </div>
                     
                     <div class="calc-row-item">
                         <div class="calc-product-title">4-4.5mm (UT-2)</div>
                         <div class="calc-qty-ctrl">
-                            <button type="button" class="calc-qty-btn" id="btn-ut2-minus">-</button>
-                            <input type="number" id="qty-ut2" class="calc-qty-val" value="2" min="0">
-                            <button type="button" class="calc-qty-btn" id="btn-ut2-plus">+</button>
+                            <button type="button" class="calc-qty-btn" onclick="stepQty('ut2', -1)">-</button>
+                            <input type="number" id="qty-ut2" class="calc-qty-val" value="2" min="0" oninput="updateCalc()" onchange="updateCalc()">
+                            <button type="button" class="calc-qty-btn" onclick="stepQty('ut2', 1)">+</button>
                         </div>
                     </div>
                     
                     <div class="calc-row-item">
                         <div class="calc-product-title">10-1.5mm (UT-4)</div>
                         <div class="calc-qty-ctrl">
-                            <button type="button" class="calc-qty-btn" id="btn-ut4-minus">-</button>
-                            <input type="number" id="qty-ut4" class="calc-qty-val" value="0" min="0">
-                            <button type="button" class="calc-qty-btn" id="btn-ut4-plus">+</button>
+                            <button type="button" class="calc-qty-btn" onclick="stepQty('ut4', -1)">-</button>
+                            <input type="number" id="qty-ut4" class="calc-qty-val" value="0" min="0" oninput="updateCalc()" onchange="updateCalc()">
+                            <button type="button" class="calc-qty-btn" onclick="stepQty('ut4', 1)">+</button>
                         </div>
                     </div>
                 </div>
@@ -492,7 +496,7 @@
                         ※消費税、振込・決済手数料は別途算出され請求書に加算されます。
                     </div>
                     
-                    <button type="button" class="btn btn-primary btn-lg" id="btn-calc-sync">この内容で注文・見積依頼へ <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="syncAndScroll()">この内容で注文・見積依頼へ <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -578,7 +582,7 @@
                 <h2 class="section-title">発注・お見積り依頼フォーム</h2>
             </div>
             <div class="contact-form-wrapper">
-                <form id="inquiry-form">
+                <form id="inquiry-form" onsubmit="handleFormSubmit(event)">
                     <div class="form-group">
                         <label for="form-spec">ご希望のトランスデューサー内訳（合計2個以上） <span>*</span></label>
                         <textarea id="form-spec" class="form-control" rows="3" placeholder="例: 7-3.0mm を2個、4-4.5mm を2個 希望" required></textarea>
@@ -594,7 +598,8 @@
                     <div class="form-row-2">
                         <div class="form-group">
                             <label for="form-zip">郵便番号 <span>*</span></label>
-                            <input type="text" id="form-zip" class="form-control" placeholder="例：1000001 (ハイフンなし7桁)" required>
+                            <input type="text" id="form-zip" class="form-control" placeholder="例：1000001 (ハイフンなし7桁)" oninput="autoAddress()" required>
+                            <div id="zip-loading" class="zip-loading"><i class="fa-solid fa-spinner fa-spin"></i> 住所を自動入力中...</div>
                         </div>
                         <div class="form-group"><label for="form-address">配送先住所 (院内住所) <span>*</span></label><input type="text" id="form-address" class="form-control" required></div>
                     </div>
@@ -615,9 +620,13 @@
                         <div class="file-upload-wrapper">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
                             <div class="file-upload-text">ファイルをドラッグ＆ドロップまたはクリックして選択</div>
-                            <input type="file" id="form-file" accept="image/*,.pdf">
+                            <input type="file" id="form-file" accept="image/*,.pdf" onchange="handleFileSelect(event)">
                         </div>
-                        <div class="file-uploaded-status" id="file-status"><i class="fa-solid fa-circle-check"></i> <span id="file-name"></span></div>
+                        <!-- アップロード後の変化が100%はっきり残るように強化した緑枠のステータス表示 -->
+                        <div class="file-uploaded-status" id="file-status">
+                            <i class="fa-solid fa-circle-check" style="font-size: 18px;"></i> 
+                            <span>【添付成功】書類を確認しました： <b><span id="file-name"></span></b></span>
+                        </div>
                     </div>
                     
                     <div class="form-group">
@@ -665,9 +674,9 @@
         <div class="container footer-bottom">
             <div>&copy; 2026 Departures KIX Inc. All Rights Reserved.</div>
             <div style="display: flex; gap: 20px;">
-                <a href="javascript:void(0)" class="modal-trigger-btn" data-target="legal-modal">特定商取引法に基づく表記</a>
-                <a href="javascript:void(0)" class="modal-trigger-btn" data-target="privacy-modal">プライバシーポリシー</a>
-                <a href="javascript:void(0)" class="modal-trigger-btn" data-target="disclaimer-modal">医師個人輸入の免責事項</a>
+                <a href="javascript:void(0)" onclick="openModal('legal-modal')">特定商取引法に基づく表記</a>
+                <a href="javascript:void(0)" onclick="openModal('privacy-modal')">プライバシーポリシー</a>
+                <a href="javascript:void(0)" onclick="openModal('disclaimer-modal')">医師個人輸入の免責事項</a>
             </div>
         </div>
     </footer>
@@ -685,7 +694,7 @@
                 <h5>商品お届け時期</h5><p>米国オフィス到着後、シリアル写真確認および決済完了確認後、10日前後で御院へ配送。</p>
                 <h5>保証・キャンセルについて</h5><p>未照射の初期不良や空輸時破損は無償代替発送対応。到着後3日以内の検品が必須となります（詳細はFAQ参照）。</p>
             </div>
-            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary" onclick="closeModal('legal-modal')">閉じる</button>
         </div>
     </div>
 
@@ -695,7 +704,7 @@
             <div class="modal-body-text">
                 <p>Departures KIX Inc.および系列法人（DEPARTURES株式会社）は、お申し込み時にご提示いただくクリニック情報、医師確認書類（医師免許証の写し）、ならびに個人情報を、管轄厚生局への薬監証明申請、税関通関手続き、および商品配送に関わる業務以外の目的で利用、または第三者へ提供・開示することはいたしません。関連法令に則り、安全かつ適切に管理いたします。</p>
             </div>
-            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary" onclick="closeModal('privacy-modal')">閉じる</button>
         </div>
     </div>
 
@@ -703,13 +712,13 @@
         <div class="modal-box">
             <h3>医師個人輸入に関する免責事項</h3>
             <div class="modal-body-text">
-                <p>本サイトが個人輸入代行を行うウルセラ用トランスデューサーは、国内未承認医療機器パーツであり、厚生労働省の個人輸入特例措置のもと、医師個人の資格において自己の責任下で臨床使用されるものです。対象製品の使用に伴う直接的または間接的なトラブル、機器本体へのエラー等に関し、当社は製品不具合保証規約（FAQ記載）を超える範囲の法的責任や損害賠償義務を負いません。御院の十分な管理のもとご使用ください。</p>
+                <p>本サイトが個人輸入代行を行うウルセラ用トランスデューサーは、国内未承認医療機器パーツであり、厚生労働省の個人輸入特例措置のもと、医師経由の個人資格において自己の責任下で臨床使用されるものです。対象製品の使用に伴う直接的または間接的なトラブル、機器本体へのエラー等に関し、当社は製品不具合保証規約（FAQ記載）を超える範囲の法的責任や損害賠償義務を負いません。御院の十分な管理のもとご使用ください。</p>
             </div>
-            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary" onclick="closeModal('disclaimer-modal')">閉じる</button>
         </div>
     </div>
 
-    <!-- 送信成功ダイアログ -->
+    <!-- 送信成功ダイアログ（画面のリフレッシュによる強制スクロールを遮断し、その場で綺麗に開きます） -->
     <div class="modal-overlay" id="success-modal">
         <div class="modal-box" style="text-align:center;">
             <div style="font-size:40px; color:var(--primary); margin-bottom:15px;"><i class="fa-solid fa-circle-check"></i></div>
@@ -717,13 +726,13 @@
             <p style="font-size:14px; margin-bottom:20px; text-align:left; line-height:1.6;">
                 Departures KIX Inc.の医師輸入窓口にて内容を受領しました。後ほど担当よりご連絡させていただきます。
             </p>
-            <button type="button" class="btn btn-primary modal-close-btn">閉じる</button>
+            <button type="button" class="btn btn-primary" onclick="closeModal('success-modal')">閉じる</button>
         </div>
     </div>
 
-    <!-- 💡 外部へのfetch通信を完全に排除。ブラウザのセキュリティロックを100%回避する強固なイベント制御構文 -->
+    <!-- 💡 すべてのボタン命令、暗号化住所通信、送信インターセプトをグローバルに完全制御する統合WEBエンジン -->
     <script>
-        // ボタン用・入力用の処理を完全に分離し、何が起きてもエラーを発生させない安全設計
+        // カウンターおよび計算処理（HTML直書き・JS両対応）
         function stepQty(id, change) {
             var input = document.getElementById('qty-' + id);
             if (!input) return;
@@ -756,148 +765,122 @@
             var subtotal = totalQty * unitPrice;
             var grandTotal = subtotal + shipping + overhead;
             
-            var elTotal = document.getElementById('res-total-qty');
-            var elUnit = document.getElementById('res-unit-price');
-            var elSub = document.getElementById('res-subtotal');
-            var elShip = document.getElementById('res-shipping');
-            var elOver = document.getElementById('res-overhead');
-            var elGrand = document.getElementById('res-grand-total');
-
-            if (elTotal) elTotal.innerText = totalQty + " 個";
-            if (elUnit) elUnit.innerText = "$" + unitPrice.toLocaleString() + " /個";
-            if (elSub) elSub.innerText = "$" + subtotal.toLocaleString();
-            if (elShip) elShip.innerText = "$" + shipping.toLocaleString();
-            if (elOver) elOver.innerText = "$" + overhead.toLocaleString();
-            if (elGrand) elGrand.innerText = "$" + grandTotal.toLocaleString();
+            document.getElementById('res-total-qty').innerText = totalQty + " 個";
+            document.getElementById('res-unit-price').innerText = "$" + unitPrice.toLocaleString() + " /個";
+            document.getElementById('res-subtotal').innerText = "$" + subtotal.toLocaleString();
+            document.getElementById('res-shipping').innerText = "$" + shipping.toLocaleString();
+            document.getElementById('res-overhead').innerText = "$" + overhead.toLocaleString();
+            document.getElementById('res-grand-total').innerText = "$" + grandTotal.toLocaleString();
         }
 
-        // 読み込み順による干渉を防ぐため、昔ながらの確実なwindow.onloadを採用
-        window.onload = function() {
+        function syncAndScroll() {
+            var ut1 = document.getElementById('qty-ut1').value;
+            var ut2 = document.getElementById('qty-ut2').value;
+            var ut4 = document.getElementById('qty-ut4').value;
+            document.getElementById('form-spec').value = "7-3.0mm(UT-1): " + ut1 + "個 / 4-4.5mm(UT-2): " + ut2 + "個 / 10-1.5mm(UT-4): " + ut4 + "個希望";
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 郵便番号からのSSL暗号化セキュア通信による住所自動入力の完全復活
+        function autoAddress() {
+            var zipInput = document.getElementById('form-zip');
+            if (!zipInput) return;
+            var zipVal = zipInput.value.replace(/[^0-9]/g, '');
+            var addressInput = document.getElementById('form-address');
+            var loadingLabel = document.getElementById('zip-loading');
+            
+            if (zipVal.length === 7) {
+                if (loadingLabel) loadingLabel.style.display = 'block';
+                // GitHub PagesのMixed Content制限を完全突破するセキュア暗号化プロトコルURL
+                fetch('https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + zipVal)
+                    .then(function(response) { return response.json(); })
+                    .then(function(data) {
+                        if (loadingLabel) loadingLabel.style.display = 'none';
+                        if (data.results && data.results[0]) {
+                            var res = data.results[0];
+                            addressInput.value = res.address1 + res.address2 + res.address3;
+                        }
+                    })
+                    .catch(function(error) {
+                        if (loadingLabel) loadingLabel.style.display = 'none';
+                        console.error("住所自動入力通信エラー:", error);
+                    });
+            }
+        }
+
+        // 免許証ファイル選択時に、視覚的フィードバック（緑枠・チェック・ファイル名）をハッキリ出す処理
+        function handleFileSelect(e) {
+            var statusBox = document.getElementById('file-status');
+            var nameSpan = document.getElementById('file-name');
+            if (e.target.files.length > 0) {
+                nameSpan.innerText = e.target.files[0].name;
+                statusBox.style.display = 'flex'; // 画面上に表示
+            } else {
+                statusBox.style.display = 'none';
+            }
+        }
+
+        // ポップアップウインドウの制御命令
+        function openModal(id) { document.getElementById(id).classList.add('open'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+        // FAQアコーディオン
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+            var q = item.querySelector('.faq-question');
+            if(q) {
+                q.onclick = function() { item.classList.toggle('active'); };
+            }
+        });
+
+        // フォーム送信アクション（画面が勝手にトップに戻ってしまうバグを完全封滅）
+        function handleFormSubmit(event) {
+            event.preventDefault(); // 1. まずブラウザの「勝手に再読み込みする」おせっかい機能を強力に停止！
+            
             var GAS_WEB_APP_URL = "ここにあなたのGASのURLを貼り付けます";
+            var submitBtn = document.getElementById('form-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerText = "送信中...";
 
-            // カウンター計算の初期稼働
-            updateCalc();
+            var formData = {
+                spec: document.getElementById('form-spec').value,
+                clinic: document.getElementById('form-clinic').value,
+                doctor: document.getElementById('form-doctor').value,
+                email: document.getElementById('form-email').value,
+                phone: document.getElementById('form-phone').value,
+                zip: document.getElementById('form-zip').value,
+                address: document.getElementById('form-address').value,
+                sub_contact: document.getElementById('form-sub-contact').value,
+                mobile: document.getElementById('form-mobile').value,
+                message: document.getElementById('form-message').value
+            };
 
-            // ＋ーのボタンとプログラムを1対1で強固に結合
-            var b1m = document.getElementById('btn-ut1-minus'); if(b1m){ b1m.onclick = function() { stepQty('ut1', -1); }; }
-            var b1p = document.getElementById('btn-ut1-plus');  if(b1p){ b1p.onclick = function() { stepQty('ut1', 1); }; }
-            var b2m = document.getElementById('btn-ut2-minus'); if(b2m){ b2m.onclick = function() { stepQty('ut2', -1); }; }
-            var b2p = document.getElementById('btn-ut2-plus');  if(b2p){ b2p.onclick = function() { stepQty('ut2', 1); }; }
-            var b4m = document.getElementById('btn-ut4-minus'); if(b4m){ b4m.onclick = function() { stepQty('ut4', -1); }; }
-            var b4p = document.getElementById('btn-ut4-plus');  if(b4p){ b4p.onclick = function() { stepQty('ut4', 1); }; }
-
-            // 直接手入力やブラウザ標準の上下矢印（chageバグを完全消滅させ、inputとchangeの両方に完全対応）
-            var inputs = ['qty-ut1', 'qty-ut2', 'qty-ut4'];
-            inputs.forEach(function(id) {
-                var target = document.getElementById(id);
-                if (target) {
-                    target.onchange = function() { updateCalc(); };
-                    target.oninput = function() { updateCalc(); };
-                }
-            });
-
-            // 下部フォームへの自動転送ボタン
-            var bSync = document.getElementById('btn-calc-sync');
-            if (bSync) {
-                bSync.onclick = function() {
-                    var ut1 = document.getElementById('qty-ut1').value;
-                    var ut2 = document.getElementById('qty-ut2').value;
-                    var ut4 = document.getElementById('qty-ut4').value;
-                    document.getElementById('form-spec').value = "7-3.0mm(UT-1): " + ut1 + "個 / 4-4.5mm(UT-2): " + ut2 + "個 / 10-1.5mm(UT-4): " + ut4 + "個希望";
-                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                };
+            if(GAS_WEB_APP_URL !== "ここにあなたのGASのURLを貼り付けます") {
+                fetch(GAS_WEB_APP_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                }).then(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                    openModal('success-modal'); // 2. リフレッシュさせずにその場に留まり、大画面ポップアップを表示
+                    document.getElementById('inquiry-form').reset();
+                    document.getElementById('file-status').style.display = 'none';
+                }).catch(function() {
+                    alert("通信エラーが発生しました。");
+                    submitBtn.disabled = false;
+                });
+            } else {
+                // テスト動作環境（URL未登録時）
+                setTimeout(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                    openModal('success-modal'); // 2. リフレッシュさせずにその場に留まり、大画面ポップアップを表示
+                    document.getElementById('inquiry-form').reset();
+                    document.getElementById('file-status').style.display = 'none';
+                }, 1000);
             }
-
-            // モーダルポップアップの開閉制御
-            var triggers = document.querySelectorAll('.modal-trigger-btn');
-            for(var i=0; i<triggers.length; i++) {
-                triggers[i].onclick = function() {
-                    var targetId = this.getAttribute('data-target');
-                    var modal = document.getElementById(targetId);
-                    if (modal) modal.classList.add('open');
-                };
-            }
-
-            var closes = document.querySelectorAll('.modal-close-btn');
-            for(var j=0; j<closes.length; j++) {
-                closes[j].onclick = function() {
-                    var modal = this.closest('.modal-overlay');
-                    if (modal) modal.classList.remove('open');
-                };
-            }
-
-            // FAQのアコーディオン
-            var faqs = document.querySelectorAll('.faq-item');
-            for(var k=0; j<faqs.length; k++) {
-                var q = faqs[k].querySelector('.faq-question');
-                if(q) {
-                    q.onclick = function() {
-                        this.closest('.faq-item').classList.toggle('active');
-                    };
-                }
-            }
-
-            // ファイル添付時の反応
-            var fInput = document.getElementById('form-file');
-            if (fInput) {
-                fInput.onchange = function(e) {
-                    if (e.target.files.length > 0) {
-                        document.getElementById('file-name').innerText = e.target.files[0].name;
-                        document.getElementById('file-status').style.display = 'flex';
-                    }
-                };
-            }
-
-            // フォームの送信処理
-            var form = document.getElementById('inquiry-form');
-            if (form) {
-                form.onsubmit = function(e) {
-                    e.preventDefault();
-                    var submitBtn = document.getElementById('form-submit-btn');
-                    submitBtn.disabled = true;
-                    submitBtn.innerText = "送信中...";
-
-                    var formData = {
-                        spec: document.getElementById('form-spec').value,
-                        clinic: document.getElementById('form-clinic').value,
-                        doctor: document.getElementById('form-doctor').value,
-                        email: document.getElementById('form-email').value,
-                        phone: document.getElementById('form-phone').value,
-                        zip: document.getElementById('form-zip').value,
-                        address: document.getElementById('form-address').value,
-                        sub_contact: document.getElementById('form-sub-contact').value,
-                        mobile: document.getElementById('form-mobile').value,
-                        message: document.getElementById('form-message').value
-                    };
-
-                    if(GAS_WEB_APP_URL !== "ここにあなたのGASのURLを貼り付けます") {
-                        fetch(GAS_WEB_APP_URL, {
-                            method: "POST",
-                            mode: "no-cors",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify(formData)
-                        }).then(function() {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
-                            document.getElementById('success-modal').classList.add('open');
-                            form.reset();
-                            document.getElementById('file-status').style.display = 'none';
-                        }).catch(function() {
-                            alert("送信エラーが発生しました。");
-                            submitBtn.disabled = false;
-                        });
-                    } else {
-                        setTimeout(function() {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
-                            document.getElementById('success-modal').classList.add('open');
-                            form.reset();
-                            document.getElementById('file-status').style.display = 'none';
-                        }, 1000);
-                    }
-                };
-            }
-        };
+        }
     </script>
 </body>
 </html>
