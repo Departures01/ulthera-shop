@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【医師限定】ウルセラ消耗品（トランスデューサー）個人輸入代行専門 | Departures KIX Inc.</title>
-    <meta name="description" content="医師限定のウルセラトランスデューサー（7-3.0mm/4-4.5mm/10-1.5mm）個人輸入代行専門サイト。米国正規並行輸入、シリアル番号・有効期限の写真提供システムで圧倒的な安心感。決済後最短10日前後で御院へお届け。薬監証明手続き完全代行。">
+    <meta name="description" content="医師限定のウルセラトランスデューサー個人輸入代行専門サイト。米国正規並行輸入、シリアル番号・有効期限の写真提供システム。決済後10日前後で御院へお届け。薬監証明手続き完全代行。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -12,10 +12,10 @@
     
     <style>
         :root {
-            --primary: #0d9488; /* Deep Teal - Clean & medical trust */
+            --primary: #0d9488;
             --primary-hover: #0f766e;
             --primary-light: #f0fdfa;
-            --secondary: #0284c7; /* Clinical Blue */
+            --secondary: #0284c7;
             --secondary-light: #f0f9ff;
             --dark: #1e293b;
             --gray-dark: #475569;
@@ -25,7 +25,7 @@
             --white: #ffffff;
             --success: #10b981;
             --error: #ef4444;
-            --accent: #f59e0b; /* Amber for highlights */
+            --accent: #f59e0b;
             --font-family: 'Noto Sans JP', sans-serif;
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -112,19 +112,15 @@
         .strength-icon { width: 60px; height: 60px; border-radius: 12px; background-color: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 24px; }
         .strength-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 16px; }
 
-        /* Products & 大判画像ギャラリー */
+        /* Products & Media Gallery */
         .products { background-color: var(--bg-light); }
         .attached-media-box { background: var(--white); border-radius: 20px; border: 1px solid #e2e8f0; padding: 30px; margin-bottom: 40px; box-shadow: var(--shadow-sm); text-align: center; }
         .attached-media-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--dark); display: flex; align-items: center; justify-content: center; gap: 8px; }
         .attached-media-box h3 i { color: var(--primary); }
         
         .gallery-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
-        .gallery-main-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
-        .gallery-sub-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
-        
-        @media (max-width: 768px) {
-            .gallery-container { grid-template-columns: 1fr; }
-        }
+        .gallery-main-visual, .gallery-sub-visual { border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md); background: #fafafa; display: flex; align-items: center; justify-content: center; }
+        @media (max-width: 768px) { .gallery-container { grid-template-columns: 1fr; } }
 
         .product-card { background-color: var(--white); border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-direction: column; transition: var(--transition); position: relative; }
         .product-card:hover { box-shadow: var(--shadow-xl); }
@@ -205,7 +201,6 @@
         
         .zip-loading { color: var(--secondary); font-size: 12px; display: none; margin-top: 4px; font-weight: bold; }
         
-        /* ルートA用：案内テキスト用のデザイン */
         .route-a-notice-box { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; display: flex; align-items: flex-start; gap: 12px; margin-top: 5px; }
         .route-a-notice-box i { color: #0284c7; font-size: 20px; margin-top: 2px; }
         .route-a-notice-text { font-size: 13.5px; color: #334155; line-height: 1.6; }
@@ -214,7 +209,7 @@
         .form-consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--gray-dark); margin-bottom: 24px; }
         .form-consent input { margin-top: 4px; accent-color: var(--primary); width: 16px; height: 16px; flex-shrink: 0; }
 
-        /* Modals for Document Links */
+        /* Modals */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(30, 41, 59, 0.7); backdrop-filter: blur(4px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: var(--transition); }
         .modal-overlay.open { opacity: 1; pointer-events: auto; }
         .modal-box { background-color: var(--white); border-radius: 16px; padding: 40px; box-shadow: var(--shadow-xl); max-width: 600px; width: 90%; text-align: left; transform: scale(0.9); transition: var(--transition); max-height: 85vh; overflow-y: auto; }
@@ -236,22 +231,23 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <div class="container">
             <a href="#" class="logo">
                 <i class="fa-solid fa-truck-ramp-box"></i>
                 <div>
-                    MLS <span class="logo-subtitle">ウルセラ消耗品（トランスデューサー）販売専門</span>
+                    MLS <span class="logo-subtitle">ウルセラ消耗品（トランスデューサー）輸入代行専門</span>
                 </div>
             </a>
             <div class="doctor-badge">
-                <i class="fa-solid fa-user-md"></i> 医師免許保有者限定個人輸入
+                <i class="fa-solid fa-user-md"></i> 医師資格保有者限定個人輸入
             </div>
             <nav>
                 <ul>
                     <li><a href="#strengths">サービス特徴</a></li>
                     <li><a href="#products">取扱製品</a></li>
-                    <li><a href="#calculator">概算見積</a></li>
+                    <li><a href="#calculator">お見積り</a></li>
                     <li><a href="#flow">ご利用の流れ</a></li>
                     <li><a href="#faq">よくある質問</a></li>
                     <li><a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px; box-shadow: none;">発注・見積依頼</a></li>
@@ -260,6 +256,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container grid grid-2">
             <div class="hero-content">
@@ -267,23 +264,23 @@
                 <h1 class="hero-title">
                     ウルセラ消耗品<br>
                     <span>トランスデューサー専門</span><br>
-                    安心のシリアル写真付請求システム
+                    シリアル写真確認後の後払い対応
                 </h1>
                 
                 <div class="usp-badge-container">
                     <div class="usp-badge-title">
-                        <i class="fa-solid fa-camera"></i> 国内ライバルを圧倒する「超安心・迅速」供給体制
+                        <i class="fa-solid fa-camera"></i> 確実かつ迅速な供給体制
                     </div>
                     <div class="usp-badge-desc">
-                        米国オフィス到着時に<b>シリアル番号・有効期限の現物写真</b>を提供。さらに<b>決済完了後、10日前後という圧倒的な短納期</b>で御院に直接お届けいたします。
+                        米国オフィス到着時に<b>シリアル番号・有効期限の現物写真</b>をご提供。製品手配完了後に決済を行う<b>安心の後払い制度</b>を採用し、決済完了後10日前後で御院へダイレクトにお届けいたします。
                     </div>
                 </div>
 
                 <p class="hero-desc">
-                    薬監証明申請等の手続きは輸入代行業者の「DEPARTURES株式会社」が完全代行。中間マージンをカットした適正な米ドル建価格でお届けします。
+                    薬監証明申請等の複雑な手続きは輸入代行会社の「DEPARTURES株式会社」が完全代行。1個からの少量ご発注にも柔軟に対応いたします。
                 </p>
                 <div class="hero-buttons">
-                    <a href="#calculator" class="btn btn-primary btn-lg">概算シミュレーター <i class="fa-solid fa-calculator"></i></a>
+                    <a href="#calculator" class="btn btn-primary btn-lg">お見積りシミュレーター <i class="fa-solid fa-calculator"></i></a>
                     <a href="#contact" class="btn btn-secondary btn-lg">発注・見積を依頼する</a>
                 </div>
             </div>
@@ -299,7 +296,7 @@
                             <div class="graphic-item-name">7-3.0mm (UT-1)</div>
                             <div class="graphic-item-price">真皮深層ターゲット / 2,400発</div>
                         </div>
-                        <span class="graphic-badge">2個〜 $2,700</span>
+                        <span class="graphic-badge">1個 $2,950〜</span>
                     </div>
                     <div class="graphic-item">
                         <div class="graphic-icon-box"><i class="fa-solid fa-wave-square"></i></div>
@@ -307,7 +304,7 @@
                             <div class="graphic-item-name">4-4.5mm (UT-2)</div>
                             <div class="graphic-item-price">SMAS筋膜層ターゲット / 2,400発</div>
                         </div>
-                        <span class="graphic-badge">2個〜 $2,700</span>
+                        <span class="graphic-badge">1個 $2,950〜</span>
                     </div>
                     <div class="graphic-item">
                         <div class="graphic-icon-box"><i class="fa-solid fa-wave-square"></i></div>
@@ -315,18 +312,19 @@
                             <div class="graphic-item-name">10-1.5mm (UT-4)</div>
                             <div class="graphic-item-price">皮膚浅層・目元ターゲット / 2,400発</div>
                         </div>
-                        <span class="graphic-badge">2個〜 $2,700</span>
+                        <span class="graphic-badge">1個 $2,950〜</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Strengths -->
     <section id="strengths" class="strengths">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Our Strengths</span>
-                <h2 class="section-title">御院のウルセラ運用コストを劇的に下げる理由</h2>
+                <h2 class="section-title">御院のウルセラ運用コストを最適化する理由</h2>
             </div>
             <div class="grid grid-3">
                 <div class="strength-card">
@@ -336,24 +334,25 @@
                 </div>
                 <div class="strength-card">
                     <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>決済後10日前後のスピード配送</h3>
-                    <p>他社を圧倒する独自流通ルートにより、Stripe決済または銀行振込完了から約10日前後でクリニックへダイレクト納品。ストック切れによる予約機会損失を最小限に防ぎます。</p>
+                    <h3>手配完了後の安心決済と迅速配送</h3>
+                    <p>ご購入商品の発送手配が整った後からの安心決済制度。クレジットカード決済または銀行振込完了から約10日前後で御院まで直送いたします。ストック切れによる予約機会損失を最小限に防ぎます。</p>
                 </div>
                 <div class="strength-card">
                     <div class="strength-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                    <h3>明確な2段階の米ドル数量割引</h3>
-                    <p>3つ全ての規格において同一のクリアな価格テーブルを採用。まとめてのご発注はもちろん、クリニックの定期発注サイクルに合わせやすい2個からのディスカウント価格を設定しています。</p>
+                    <h3>購入個数に応じた明確な数量割引</h3>
+                    <p>3つ全ての規格において同一の体系を採用。1個からの少量ご発注はもちろん、2個以上で1個あたり$250割引、5個以上のご購入で最大1個あたり$450のディスカウント価格を適用いたします。</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Products -->
     <section id="products" class="products">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Lineup</span>
                 <h2 class="section-title">ウルセラ トランスデューサー（3種類）</h2>
-                <p class="section-desc">米国ディストリビューター公認ルートからの純正並行輸入品。全て2,400ショットのフル仕様です。</p>
+                <p class="section-desc">商品は全て純正品です。本商品は日本では未承認医療機器のため並行輸入品となります。</p>
             </div>
             
             <div class="attached-media-box">
@@ -369,6 +368,7 @@
             </div>
             
             <div class="grid grid-3">
+                <!-- UT-1 -->
                 <div class="product-card">
                     <span class="product-badge">2,400発 フル</span>
                     <div class="product-img-box">
@@ -380,12 +380,14 @@
                         <p class="product-desc">主として真皮深層への正確な熱アプローチを行うトランスデューサーです。</p>
                         <table class="pricing-table">
                             <tr><th>注文数</th><th>単価(USD)</th></tr>
-                            <tr><td>2〜5個</td><td>$2,700</td></tr>
-                            <tr class="highlight"><td>6個以上</td><td>$2,500</td></tr>
+                            <tr><td>1個</td><td>$2,950</td></tr>
+                            <tr><td>2〜4個</td><td>$2,700 ($250 OFF)</td></tr>
+                            <tr class="highlight"><td>5個以上</td><td>$2,500 ($450 OFF)</td></tr>
                         </table>
                     </div>
                 </div>
 
+                <!-- UT-2 -->
                 <div class="product-card">
                     <span class="product-badge">2,400発 フル</span>
                     <div class="product-img-box">
@@ -397,12 +399,14 @@
                         <p class="product-desc">リフトアップ治療の要となるSMAS（筋膜）層へ熱エネルギーを届けるコアパーツです。</p>
                         <table class="pricing-table">
                             <tr><th>注文数</th><th>単価(USD)</th></tr>
-                            <tr><td>2〜5個</td><td>$2,700</td></tr>
-                            <tr class="highlight"><td>6個以上</td><td>$2,500</td></tr>
+                            <tr><td>1個</td><td>$2,950</td></tr>
+                            <tr><td>2〜4個</td><td>$2,700 ($250 OFF)</td></tr>
+                            <tr class="highlight"><td>5個以上</td><td>$2,500 ($450 OFF)</td></tr>
                         </table>
                     </div>
                 </div>
 
+                <!-- UT-4 -->
                 <div class="product-card">
                     <span class="product-badge">2,400発 フル</span>
                     <div class="product-img-box">
@@ -414,8 +418,9 @@
                         <p class="product-desc">皮膚浅層、または目元などのデリケートで薄いエリアへのタイトニング照射に使用します。</p>
                         <table class="pricing-table">
                             <tr><th>注文数</th><th>単価(USD)</th></tr>
-                            <tr><td>2〜5個</td><td>$2,700</td></tr>
-                            <tr class="highlight"><td>6個以上</td><td>$2,500</td></tr>
+                            <tr><td>1個</td><td>$2,950</td></tr>
+                            <tr><td>2〜4個</td><td>$2,700 ($250 OFF)</td></tr>
+                            <tr class="highlight"><td>5個以上</td><td>$2,500 ($450 OFF)</td></tr>
                         </table>
                     </div>
                 </div>
@@ -423,25 +428,26 @@
         </div>
     </section>
 
+    <!-- Calculator -->
     <section id="calculator" class="calculator">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Simulation</span>
-                <h2 class="section-title">規格組み合わせ対応・概算シミュレーター</h2>
-                <p class="section-desc">各型番の必要数量を入力してください。合計数に応じた単価および送料が自動的に適用されます。</p>
+                <h2 class="section-title">お見積りシミュレーター</h2>
+                <p class="section-desc">各型番の必要数量を入力してください。合計数に応じた単価および送料が自動適用されます。</p>
             </div>
             
             <div class="calc-wrapper">
                 <div class="calc-left">
                     <div style="font-size:13px; font-weight:bold; margin-bottom:15px; color:var(--gray-dark);">
-                        ※トータル2個以上からご注文を承ります。
+                        ※1個からご自由な組み合わせでご注文いただけます。
                     </div>
                     
                     <div class="calc-row-item">
                         <div class="calc-product-title">7-3.0mm (UT-1)</div>
                         <div class="calc-qty-ctrl">
                             <button type="button" class="calc-qty-btn" onclick="stepQty('ut1', -1)">-</button>
-                            <input type="number" id="qty-ut1" class="calc-qty-val" value="2" min="0" oninput="updateCalc()" onchange="updateCalc()">
+                            <input type="number" id="qty-ut1" class="calc-qty-val" value="1" min="0" oninput="updateCalc()" onchange="updateCalc()">
                             <button type="button" class="calc-qty-btn" onclick="stepQty('ut1', 1)">+</button>
                         </div>
                     </div>
@@ -450,7 +456,7 @@
                         <div class="calc-product-title">4-4.5mm (UT-2)</div>
                         <div class="calc-qty-ctrl">
                             <button type="button" class="calc-qty-btn" onclick="stepQty('ut2', -1)">-</button>
-                            <input type="number" id="qty-ut2" class="calc-qty-val" value="2" min="0" oninput="updateCalc()" onchange="updateCalc()">
+                            <input type="number" id="qty-ut2" class="calc-qty-val" value="1" min="0" oninput="updateCalc()" onchange="updateCalc()">
                             <button type="button" class="calc-qty-btn" onclick="stepQty('ut2', 1)">+</button>
                         </div>
                     </div>
@@ -466,16 +472,16 @@
                 </div>
                 
                 <div class="calc-right">
-                    <h3 class="summary-title"><i class="fa-solid fa-calculator"></i> 概算お見積り結果</h3>
-                    <div class="summary-row"><span class="summary-label">総発注数量:</span><span id="res-total-qty" style="font-weight:bold;">4 個</span></div>
+                    <h3 class="summary-title"><i class="fa-solid fa-calculator"></i> お見積り結果</h3>
+                    <div class="summary-row"><span class="summary-label">総発注数量:</span><span id="res-total-qty" style="font-weight:bold;">2 個</span></div>
                     <div class="summary-row"><span class="summary-label">適用単価:</span><span id="res-unit-price">$2,700 /個</span></div>
-                    <div class="summary-row"><span class="summary-label">商品小計:</span><span id="res-subtotal">$10,800</span></div>
+                    <div class="summary-row"><span class="summary-label">商品小計:</span><span id="res-subtotal">$5,400</span></div>
                     <div class="summary-row"><span class="summary-label">送料:</span><span id="res-shipping">$175</span></div>
                     <div class="summary-row"><span class="summary-label">輸入諸経費:</span><span id="res-overhead">$90</span></div>
                     
                     <div class="summary-row total">
-                        <span style="color:var(--dark); font-size:16px;">概算見積合計:</span>
-                        <span id="res-grand-total">$11,065</span>
+                        <span style="color:var(--dark); font-size:16px;">お見積り合計:</span>
+                        <span id="res-grand-total">$5,665</span>
                     </div>
                     
                     <div style="font-size:11px; color:var(--gray); text-align:right; margin-bottom:15px;">
@@ -488,6 +494,7 @@
         </div>
     </section>
 
+    <!-- Process -->
     <section id="flow" class="flow">
         <div class="container">
             <div class="section-header">
@@ -497,13 +504,14 @@
             <div class="flow-grid">
                 <div class="flow-step active"><div class="flow-num">1</div><h4>Web発注・見積依頼</h4><p>下部フォームより必要事項、組み合わせ内訳等を入力し送信。</p></div>
                 <div class="flow-step active"><div class="flow-num">2</div><h4>ご注文確認のご案内</h4><p>弊社よりご注文確定のご案内をメールで送信。※納期は約2週間となります。</p></div>
-                <div class="flow-step active"><div class="flow-num">3</div><h4>実物写真確認と請求書発行</h4><p>米国オフィス到着後、シリアル・有効期限の写真と当日の為替レート(TTS)を適用した請求書を送付。2営業日以内に決済。</p></div>
+                <div class="flow-step active"><div class="flow-num">3</div><h4>実物写真確認と請求書発行</h4><p>米国オフィス到着後、シリアル・有効期限の写真と当日の為替レート(TTS)を適用した請求書を送付。2営業日以内に決済をお願いします。</p></div>
                 <div class="flow-step active"><div class="flow-num">4</div><h4>薬監証明申請・通関</h4><p>入金確認次第、即時空輸。輸入手続きはDEPARTURES株式会社が完全代行。</p></div>
-                <div class="flow-step active"><div class="flow-num">5</div><h4>クリニックにお届け</h4><p>決済完了後、約10日前後で税関を通過し、院へ直接配送されます。</p></div>
+                <div class="flow-step active"><div class="flow-num">5</div><h4>クリニックにお届け</h4><p>決済完了後、約10日前後で税関を通過し、御院へ直接配送されます。</p></div>
             </div>
         </div>
     </section>
 
+    <!-- Notices -->
     <section class="notice-section">
         <div class="container">
             <div class="notice-box">
@@ -513,7 +521,7 @@
                 </div>
                 <div class="notice-list">
                     <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>自己の患者の診断又は治療に使用するために個人輸入:</b> ウルセラ消耗品の個人輸入は、医師本人が自己の患者の診断又は治療に使用することを前提とした特例措置です。第三者への転売や譲渡は法律で固く禁止されています。</div></div>
-                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>薬監証明の完全代行:</b> 地方厚生局への書類提出や複雑な通関手続き交渉は、系列の国内法人<b>「DEPARTURES 株式会社」</b>がすべて代行・サポートいたします。</div></div>
+                    <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>薬監証明の完全代行:</b> 各地方厚生局への手続き（必要書類の作成および提出等）は、系列の国内法人<b>「DEPARTURES 株式会社」</b>がすべて代行・サポートいたします。</div></div>
                     <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>医師免許証のご確認:</b> 適法運用のご基本条件として、初回発注時に必ず「医師免許証の写し（PDF）」をご提示いただきます。</div></div>
                     <div class="notice-item"><i class="fa-solid fa-circle-info"></i><div class="notice-item-text"><b>為替レート適用基準:</b> 請求書発行日当日の「りそな銀行公示 TTSレート」が計算基準となります。</div></div>
                 </div>
@@ -521,6 +529,7 @@
         </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq" class="faq">
         <div class="container">
             <div class="section-header">
@@ -530,25 +539,25 @@
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item">
                     <div class="faq-question"><span>Q1. 本当にメーカー純正の正規品ですか？並行輸入品と何が違いますか？</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>商品は正規品ですが、未承認機器のため全て並行輸入品になります。商品は米国の正規品の並行輸入となります。また、正規品証明可能なロット番号などは存在しません。一部中国や韓国（コピー品が多い国）ではロット番号が存在するよういますが、日本国内や米国・欧州には存在しません。</p></div>
+                    <div class="faq-answer"><p>商品は全て純正品です。本商品は日本では未承認医療機器のため並行輸入品となります。また、正規品証明可能なロット番号などは存在しません。一部のアジア諸国（コピー品が多い国）ではロット番号が存在する場合もありますが、日本国内や米国・欧州市場においては存在いたしません。</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question"><span>Q2. 厚生労働局への書類提出や交渉はMLSに丸投げできますか？</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>はい。厚生労働局への書類提出や交渉は輸入代行業者の「DEPARTURES 株式会社」が全面的に代行・担当いたしますのでご安心ください。</p></div>
+                    <div class="faq-question"><span>Q2. 各厚生局への書類提出などの手続きはお任せできますか？</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>はい。各厚生局への書類の提出他、全て系列会社の「DEPARTURES 株式会社」が全面的に代行・担当いたしますのでご安心ください。</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Q3. 支払時期と決済方法の詳細を教えてください。</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>ご注文いただいた商品が弊社（米国カリフォルニア州）のオフィスに到着後、シリアル番号の写真と請求書（当日の為替レート適用）をメールで送信いたします。2営業日までにお支払いください。<br><br>決済方法：お振込みの場合は、日本国内の輸入代行会社へお振込みください。クレジットカード決済ご希望の方には、お支払い用 Stripe Checkout 決済リンクをご案内します。<br>※クレジットカード決済の場合、別途2.3%の手数料がかかります。初回のみ、当社が負担しカード決済手数料はサービスとさせていただきます。</p></div>
+                    <div class="faq-answer"><p>ご注文いただいた商品が弊社（米国カリフォルニア州）のオフィスに到着後、シリアル番号の写真と請求書（当日の為替レート適用）をメールで送信いたします。2営業日以内にお支払いをお願いいたします。<br><br>決済方法：お振込みの場合は、系列会社の日本国内法人「DEPARTURES 株式会社」へお振込みください。クレジットカード決済ご希望の方には、お支払い用 Stripe Checkout 決済リンクをご案内します。<br>※クレジットカード決済の場合、別途2.3%の手数料がかかります。初回のみ、当社が負担しカード決済手数料はサービスとさせていただきます。</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Q4. 注文から手元に届くまでに何日かかりますか？</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>お支払い完了後、10日前後でご指定 of クリニックにお届けいたします。発注から合計2〜3週間前後の予定でございます。</p></div>
+                    <div class="faq-answer"><p>お支払い完了後、10日前後で御クリニックにお届けいたします。発注から合計2〜3週間前後の予定でございます。</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Q5. 初期不良や照射途中のエラー等の不具合保証はどうなっていますか？</span><i class="fa-solid fa-chevron-down"></i></div>
                     <div class="faq-answer">
-                        <p>万が一、空輸中のパッケージ破損や、装着時のシステム読み込みエラー（未照射の初期不良）が発生した場合は、速やかに代替品の無償発送または返金の対応をいたします。使用後の不具合についての保証は、メーカー有効期限内のみ補償対象となります。また、照射残数が100LINE未満の場合は補償対象外となります。<br><br>
-                        ●照射残数100LINE以上の場合、LINE単価×LINE残数にて次回の注文時に相殺させていただきます。（例: $2,500で購入、故障時残数1,000発の場合 ➡ $2,500 ÷ 2,400 × 1,000 = $1,041 保証金額）<br>
+                        <p>万が一、空輸中のパッケージ破損や、装着時のシステム読み込みエラー（未照射の初期不良）が発生した場合は、速やかに代替品の無償発送または返金の対応をいたします。使用後の不具合についての保証は、メーカー有効期限内のみ保証対象となります。また、照射残数が100LINE未満の場合は保証対象外となります。<br><br>
+                        ●照射残数100LINE以上の場合、LINE単価×LINE残数にて次回の注文時に相殺させていただきます。（例: $2,500で購入、故障時残数1,000LINEの場合 ➡ $2,500 ÷ 2,400 × 1,000 = $1,041 保証金額）<br>
                         ●エコー画像（映らない、暗い、鮮明ではない等）の不具合は保証対象外となります。<br>
                         ●商品到着後3日以内に検品をお願いします。商品到着後3日以降の欠品、誤発注品、外損（水漏れ、照射面の傷み、破損）は保証対象外となりますのでご注意ください。</p>
                     </div>
@@ -557,6 +566,7 @@
         </div>
     </section>
 
+    <!-- Contact Form -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -566,12 +576,12 @@
             <div class="contact-form-wrapper">
                 <form id="inquiry-form" onsubmit="handleFormSubmit(event)">
                     <div class="form-group">
-                        <label for="form-spec">ご希望のトランスデューサー内訳（合計2個以上） <span>*</span></label>
-                        <textarea id="form-spec" class="form-control" rows="3" placeholder="例: 7-3.0mm を2個、4-4.5mm を2個 希望" required></textarea>
+                        <label for="form-spec">ご希望のトランスデューサー内訳（1個から対応可能） <span>*</span></label>
+                        <textarea id="form-spec" class="form-control" rows="3" placeholder="例: 7-3.0mm を1個、4-4.5mm を1個 希望" required></textarea>
                     </div>
                     <div class="form-row-2">
                         <div class="form-group"><label for="form-clinic">クリニック・医療機関名 <span>*</span></label><input type="text" id="form-clinic" class="form-control" required></div>
-                        <div class="form-group"><label for="form-doctor">医師氏名 (医籍登録名義) <span>*</span></label><input type="text" id="form-doctor" class="form-control" required></div>
+                        <div class="form-group"><label for="form-doctor">医師氏名 <span>*</span></label><input type="text" id="form-doctor" class="form-control" required></div>
                     </div>
                     <div class="form-row-2">
                         <div class="form-group"><label for="form-email">メールアドレス <span>*</span></label><input type="email" id="form-email" class="form-control" required></div>
@@ -592,7 +602,7 @@
                             <input type="text" id="form-sub-contact" class="form-control" placeholder="例：事務長 山田花子">
                         </div>
                         <div class="form-group">
-                            <label for="form-mobile">ご担当者携帯番号 もしくは 医籍登録医師の携帯番号 <span>*</span></label>
+                            <label for="form-mobile">ご担当者携帯番号 もしくは 医師の携帯番号 <span>*</span></label>
                             <input type="tel" id="form-mobile" class="form-control" placeholder="例：09012345678 (ハイフンなし)" required>
                         </div>
                     </div>
@@ -611,7 +621,7 @@
                     
                     <div class="form-group">
                         <label for="form-message">その他ご要望・お問い合わせ（ご質問や機器買取査定の希望などございましたらご記入ください）</label>
-                        <textarea id="form-message" class="form-control" rows="3" placeholder="当社は美容医療機器の買取も行っております。特に未承認機器につきましてはアメリカ向けに買取らさせていただきます。査定希望の機器名等があればご記入ください。"></textarea>
+                        <textarea id="form-message" class="form-control" rows="3" placeholder="当社は美容医療機器の買取も行っております。特に未承認機器につきましてはアメリカ向けに買取させていただきます。査定希望の機器名等があればご記入ください。"></textarea>
                     </div>
                     <div class="form-consent">
                         <input type="checkbox" id="form-agree" required>
@@ -623,6 +633,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container grid grid-3">
             <div>
@@ -637,7 +648,7 @@
                     <li><a href="#products">7-3.0mm (UT-1)</a></li>
                     <li><a href="#products">4-4.5mm (UT-2)</a></li>
                     <li><a href="#products">10-1.5mm (UT-4)</a></li>
-                    <li><a href="#calculator">価格シミュレーター</a></li>
+                    <li><a href="#calculator">お見積りシミュレーター</a></li>
                 </ul>
             </div>
             <div>
@@ -660,6 +671,7 @@
         </div>
     </footer>
 
+    <!-- Modals -->
     <div class="modal-overlay" id="legal-modal">
         <div class="modal-box">
             <h3>特定商取引法に基づく表記</h3>
@@ -707,6 +719,7 @@
         </div>
     </div>
 
+    <!-- WEB Engine & Calculator Script -->
     <script>
         function stepQty(id, change) {
             var input = document.getElementById('qty-' + id);
@@ -717,6 +730,7 @@
             updateCalc();
         }
 
+        /* 💡 1個〜対応 & 3段階スライド価格ロジック */
         function updateCalc() {
             var ut1Input = document.getElementById('qty-ut1');
             var ut2Input = document.getElementById('qty-ut2');
@@ -730,11 +744,19 @@
             
             var totalQty = ut1 + ut2 + ut4;
             
-            var unitPrice = 2700;
-            if (totalQty >= 6) { unitPrice = 2500; }
+            // 価格ロジック: 1個=$2,950 / 2〜4個=$2,700 / 5個以上=$2,500
+            var unitPrice = 2950;
+            if (totalQty >= 5) {
+                unitPrice = 2500;
+            } else if (totalQty >= 2) {
+                unitPrice = 2700;
+            }
             
+            // 送料ロジック: 1〜4個=$175 / 5個以上=$225
             var shipping = 0;
-            if (totalQty > 0) { shipping = (totalQty <= 4) ? 175 : 225; }
+            if (totalQty > 0) {
+                shipping = (totalQty <= 4) ? 175 : 225;
+            }
             
             var overhead = totalQty > 0 ? 90 : 0;
             var subtotal = totalQty * unitPrice;
@@ -799,7 +821,6 @@
         function handleFormSubmit(event) {
             event.preventDefault();
             
-            // ⚠️ あなたの本物のデプロイURLに書き換えてください！
             var GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxi_BFto8bbjjsyh4jQiYgvU6-P3DW2nDcNSVStxbZXVDjbWuXrj4hcq6hdt2FvmFel-A/exec";
             var submitBtn = document.getElementById('form-submit-btn');
             submitBtn.disabled = true;
