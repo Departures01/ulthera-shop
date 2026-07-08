@@ -51,7 +51,6 @@
         @media (max-width: 992px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } section { padding: 60px 0; } }
 
-        /* 💡 ボタンの変な改行を防止する調整 */
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; font-weight: 500; border-radius: 8px; border: none; cursor: pointer; transition: var(--transition); font-size: 15px; box-shadow: var(--shadow-sm); white-space: nowrap; word-break: keep-all; }
         .btn-primary { background-color: var(--primary); color: var(--white); }
         .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
@@ -70,11 +69,10 @@
         .doctor-badge { background-color: var(--secondary-light); color: var(--secondary); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--secondary); margin-left: 15px; display: inline-flex; align-items: center; white-space: nowrap; }
         .doctor-badge i { margin-right: 4px; }
 
-        /* 💡 ヘッダーナビゲーションの変な改行を防止する調整 */
         nav ul { display: flex; align-items: center; gap: 20px; }
         nav a { font-weight: 500; color: var(--gray-dark); font-size: 15px; white-space: nowrap; }
         nav a:hover { color: var(--primary); }
-        @media (max-width: 1080px) { nav { display: none; } } /* 崩れないよう少し早めにスマホメニューに切り替え */
+        @media (max-width: 1080px) { nav { display: none; } }
 
         /* Hero Section */
         .hero { background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%); overflow: hidden; border-bottom: 1px solid var(--gray-light); }
@@ -210,15 +208,19 @@
         .form-consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--gray-dark); margin-bottom: 24px; }
         .form-consent input { margin-top: 4px; accent-color: var(--primary); width: 16px; height: 16px; flex-shrink: 0; }
 
-        /* Modals */
+        /* Modals & Confirmation Table */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(30, 41, 59, 0.7); backdrop-filter: blur(4px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: var(--transition); }
         .modal-overlay.open { opacity: 1; pointer-events: auto; }
-        .modal-box { background-color: var(--white); border-radius: 16px; padding: 40px; box-shadow: var(--shadow-xl); max-width: 600px; width: 90%; text-align: left; transform: scale(0.9); transition: var(--transition); max-height: 85vh; overflow-y: auto; }
+        .modal-box { background-color: var(--white); border-radius: 16px; padding: 35px; box-shadow: var(--shadow-xl); max-width: 650px; width: 92%; text-align: left; transform: scale(0.9); transition: var(--transition); max-height: 85vh; overflow-y: auto; }
         .modal-overlay.open .modal-box { transform: scale(1); }
         .modal-box h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 15px; border-bottom: 2px solid var(--primary-light); padding-bottom: 8px; text-align: center; }
         .modal-body-text { font-size: 13px; color: var(--gray-dark); line-height: 1.6; margin-bottom: 20px; }
         .modal-body-text h5 { font-size: 14px; font-weight: bold; color: var(--dark); margin: 12px 0 4px 0; }
-        .modal-box .btn { width: 100%; }
+
+        /* 💡 送信確認テーブルのデザイン */
+        .confirm-table { width: 100%; border-collapse: collapse; margin: 15px 0 25px 0; font-size: 13.5px; }
+        .confirm-table th { width: 32%; background-color: var(--bg-light); color: var(--gray-dark); padding: 10px; text-align: left; border: 1px solid #e2e8f0; font-weight: bold; vertical-align: top; }
+        .confirm-table td { padding: 10px; border: 1px solid #e2e8f0; color: var(--dark); white-space: pre-wrap; word-break: break-all; }
 
         footer { background-color: var(--dark); color: #94a3b8; padding: 60px 0 20px 0; border-top: 1px solid #334155; font-size: 13px; }
         footer h4 { color: var(--white); font-size: 15px; font-weight: 700; margin-bottom: 20px; }
@@ -576,7 +578,7 @@
                 <h2 class="section-title">発注・お見積り依頼フォーム</h2>
             </div>
             <div class="contact-form-wrapper">
-                <form id="inquiry-form" onsubmit="handleFormSubmit(event)">
+                <form id="inquiry-form" onsubmit="openConfirmModal(event)">
                     <div class="form-group">
                         <label for="form-spec">ご希望のトランスデューサー内訳（1個から対応可能） <span>*</span></label>
                         <textarea id="form-spec" class="form-control" rows="3" placeholder="例: 7-3.0mm を1個、4-4.5mm を1個 希望" required></textarea>
@@ -629,7 +631,7 @@
                         <input type="checkbox" id="form-agree" required>
                         <label for="form-agree">自己の患者の診断又は治療に使用するために個人輸入を委任すること、および各種規約・免責事項に同意します。</label>
                     </div>
-                    <div style="text-align: center;"><button type="submit" id="form-submit-btn" class="btn btn-primary btn-lg" style="width: 100%; max-width: 320px;">発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i></button></div>
+                    <div style="text-align: center;"><button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 320px;">内容を確認する <i class="fa-solid fa-magnifying-glass"></i></button></div>
                 </form>
             </div>
         </div>
@@ -671,6 +673,32 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="confirm-modal">
+        <div class="modal-box">
+            <h3><i class="fa-solid fa-clipboard-check" style="color:var(--primary);"></i> ご注文・送信内容の確認</h3>
+            <p style="font-size: 13px; color: var(--gray-dark); margin-bottom: 15px;">
+                入力内容にお間違えがないかご確認ください。「この内容で送信する」ボタンを押すと発注・お見積り依頼が完了します。
+            </p>
+            
+            <table class="confirm-table">
+                <tr><th>ご希望内訳</th><td id="cfm-spec"></td></tr>
+                <tr><th>クリニック名</th><td id="cfm-clinic"></td></tr>
+                <tr><th>医師氏名</th><td id="cfm-doctor"></td></tr>
+                <tr><th>メールアドレス</th><td id="cfm-email"></td></tr>
+                <tr><th>電話番号</th><td id="cfm-phone"></td></tr>
+                <tr><th>郵便番号 / 住所</th><td id="cfm-address"></td></tr>
+                <tr><th>ご担当者名</th><td id="cfm-sub-contact"></td></tr>
+                <tr><th>携帯番号</th><td id="cfm-mobile"></td></tr>
+                <tr><th>その他要望</th><td id="cfm-message"></td></tr>
+            </table>
+
+            <div style="display: flex; gap: 12px;">
+                <button type="button" class="btn btn-secondary" style="flex: 1;" onclick="closeModal('confirm-modal')">修正する</button>
+                <button type="button" id="form-submit-btn" class="btn btn-primary" style="flex: 2;" onclick="executeFormSubmit()">この内容で送信する <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
 
     <div class="modal-overlay" id="legal-modal">
         <div class="modal-box">
@@ -814,9 +842,24 @@
             if(q) { q.onclick = function() { item.classList.toggle('active'); }; }
         });
 
-        function handleFormSubmit(event) {
+        /* 💡 送信確認モーダルを開く処理 */
+        function openConfirmModal(event) {
             event.preventDefault();
-            
+            document.getElementById('cfm-spec').innerText = document.getElementById('form-spec').value;
+            document.getElementById('cfm-clinic').innerText = document.getElementById('form-clinic').value;
+            document.getElementById('cfm-doctor').innerText = document.getElementById('form-doctor').value + " 先生";
+            document.getElementById('cfm-email').innerText = document.getElementById('form-email').value;
+            document.getElementById('cfm-phone').innerText = document.getElementById('form-phone').value;
+            document.getElementById('cfm-address').innerText = "〒" + document.getElementById('form-zip').value + "\n" + document.getElementById('form-address').value;
+            document.getElementById('cfm-sub-contact').innerText = document.getElementById('form-sub-contact').value || "---";
+            document.getElementById('cfm-mobile').innerText = document.getElementById('form-mobile').value;
+            document.getElementById('cfm-message').innerText = document.getElementById('form-message').value || "特になし";
+
+            openModal('confirm-modal');
+        }
+
+        /* 💡 確認モーダルで「この内容で送信する」を押した時の実送信処理 */
+        function executeFormSubmit() {
             var GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxi_BFto8bbjjsyh4jQiYgvU6-P3DW2nDcNSVStxbZXVDjbWuXrj4hcq6hdt2FvmFel-A/exec";
             var submitBtn = document.getElementById('form-submit-btn');
             submitBtn.disabled = true;
@@ -842,7 +885,8 @@
                 body: JSON.stringify(formData)
             }).then(function() {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '発注・お見積り依頼を送信する <i class="fa-solid fa-paper-plane"></i>';
+                submitBtn.innerHTML = 'この内容で送信する <i class="fa-solid fa-paper-plane"></i>';
+                closeModal('confirm-modal');
                 openModal('success-modal');
                 document.getElementById('inquiry-form').reset();
             }).catch(function() {
