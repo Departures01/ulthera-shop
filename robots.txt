@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://departures01.github.io/ulthera-shop/sitemap.xml
