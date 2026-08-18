@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- 3. 構造化データ (JSON-LD) - 製品情報 & FAQ -->
+   <!-- 3. 構造化データ (JSON-LD) - エラー修正済み完全版 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -38,6 +38,7 @@
         {
           "@type": "Product",
           "name": "ウルセラ 純正トランスデューサー（カートリッジ）",
+          "image": "https://departures01.github.io/ulthera-shop/ulthera-main.jpg",
           "description": "医師限定・ウルセラ（Ulthera）純正トランスデューサー個人輸入代行。1.5mm / 3.0mm / 4.5mm 対応。薬監証明手続き完全代行。",
           "brand": {
             "@type": "Brand",
@@ -45,7 +46,13 @@
           },
           "offers": {
             "@type": "AggregateOffer",
+            "url": "https://departures01.github.io/ulthera-shop/",
             "priceCurrency": "JPY",
+            "lowPrice": "110000",
+            "highPrice": "330000",
+            "offerCount": "3",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
             "availability": "https://schema.org/InStock",
             "seller": {
               "@type": "Organization",
